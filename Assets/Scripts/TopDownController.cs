@@ -14,9 +14,15 @@ public class TopDownController : MonoBehaviour {
     public List<Sprite> eSprites;
     public List<Sprite> seSprites;
     public List<Sprite> sSprites;
-    public float walkSpeed;
+    public float walkSpeed = 3.0f;
     public float frameRate;
 
+    [SerializeField] private float dashDuration = 0.2f; //both can edit thru inspector
+    [SerializeField] private float dashCooldown = 0.5f;
+    private float dashSpeed = 7.0f;
+    private bool canDash = true;
+    private bool isDashing = false;
+    
     float idleTime;
     Vector2 direction;
     Sprite idleSprite = null;
@@ -27,10 +33,17 @@ public class TopDownController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        // set walk based on direction
+        if (isDashing)
+        {
+            return;
+        }
+        if (Input.GetKey(KeyCode.Space) && canDash)
+        {
+            StartCoroutine(Dash());
+        }
         // get direction based on input
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
-        // set walk based on direction
-        body.velocity = direction * walkSpeed;
         handleSpriteFlip();  // mirror current sprite (along y axis) if needed
         
         List<Sprite> directionSprites = getSpriteDirection();   // returns lists of all sprites facing curr direction
@@ -81,4 +94,25 @@ public class TopDownController : MonoBehaviour {
 
         return selectedSprites;
     }
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        body.velocity = direction * dashSpeed;
+        yield return new WaitForSeconds(dashDuration);
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
+    }
+    /*
+    private IEnumerator StartiFrames(int frames)
+    {
+        for (int i = 0; i < frames; i++)
+        {
+            yield return new WaitForSeconds();
+
+        }
+
+    }*/
 }
