@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class TopDownController : MonoBehaviour {
     
-    private float moveSpeed = 2f;  
+    private float moveSpeed = 3f;  
     private Rigidbody2D body;
     private Animator animator;
     private Vector2 moveInput;
@@ -38,6 +38,5 @@ public class TopDownController : MonoBehaviour {
         } else {
             animator.SetBool("isWalking", false);
         }
-        
     }
 }
