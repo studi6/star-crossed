@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 public class TopDownController : MonoBehaviour {
     
     private float moveSpeed = 3f;  
+    private float currentSpeed = 0;
+    private float targetSpeed = 0;
     private Rigidbody2D body;
     private Animator animator;
     private Vector2 moveInput;
@@ -32,11 +34,17 @@ public class TopDownController : MonoBehaviour {
     // Purpose: Update is called once per frame
     void Update() {
         if (moveInput != Vector2.zero) {
-            Vector2 moveVector = moveInput * moveSpeed * Time.fixedDeltaTime;
-            body.MovePosition(body.position + moveVector);
+            targetSpeed = moveSpeed;
             animator.SetBool("isWalking", true);
         } else {
+            targetSpeed = 0;
             animator.SetBool("isWalking", false);
         }
+        
+        // The following line performs some basic smoothening on our values to create more
+        // fluid animations - they are still janky but we'll optimize them later
+        currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, Time.fixedDeltaTime);
+        Vector2 moveVector = moveInput * currentSpeed * Time.fixedDeltaTime;
+        body.MovePosition(body.position + moveVector);
     }
 }

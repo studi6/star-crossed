@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 2009172280}
   - component: {fileID: 2009172279}
   - component: {fileID: 2009172283}
+  - component: {fileID: 2009172284}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -239,30 +240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67612342cfbae4b2abe8c8d96484aa0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 2009172280}
-  spriteRenderer: {fileID: 2009172281}
-  nSprites:
-  - {fileID: 1899190649, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  - {fileID: -160846550, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  - {fileID: 510645560, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  neSprites:
-  - {fileID: -602015726, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  - {fileID: -1526596914, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  - {fileID: 671906311, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  eSprites:
-  - {fileID: 1975571350, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  - {fileID: -469070321, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  - {fileID: 1601710855, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  seSprites:
-  - {fileID: 1338264457, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  - {fileID: -293386084, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  - {fileID: -2005728126, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  sSprites:
-  - {fileID: -2103270580, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  - {fileID: -1206320452, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  - {fileID: 1248622183, guid: 15fbf2eaa08a14b80aa14cd6a72e18a0, type: 3}
-  walkSpeed: 3
-  frameRate: 8
 --- !u!50 &2009172280
 Rigidbody2D:
   serializedVersion: 4
@@ -371,3 +348,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2009172284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009172278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: fb30055a96c7746b98238b3b65aa9535, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
