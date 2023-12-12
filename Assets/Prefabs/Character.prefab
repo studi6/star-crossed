@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8446335166199585446}
   - component: {fileID: 8446335166199585449}
   - component: {fileID: 8446335166199585445}
+  - component: {fileID: 2540886234530076901}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -120,6 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67612342cfbae4b2abe8c8d96484aa0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashSpeed: 6
+  dashDuration: 0.2
+  dashCooldown: 0.5
 --- !u!95 &8446335166199585445
 Animator:
   serializedVersion: 4
@@ -140,3 +144,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2540886234530076901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8446335166199585448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: fb30055a96c7746b98238b3b65aa9535, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

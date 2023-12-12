@@ -31,10 +31,6 @@ public class TopDownController : MonoBehaviour {
     // More about Unity's "new" (it's really been around for a while now) input system here: 
     // https://gamedevbeginner.com/input-in-unity-made-easy-complete-guide-to-the-new-system/
     public void OnMove(InputValue value) {
-        if (isDashing)
-        {
-            return;
-        }
         moveInput = value.Get<Vector2>();
         // only set the animation direction if the player is trying to move
         if (moveInput != Vector2.zero) {
@@ -72,7 +68,7 @@ public class TopDownController : MonoBehaviour {
         canDash = false;
         animator.SetBool("isDashing", true);
         isDashing = true;
-        body.velocity = moveInput * dashSpeed;
+        body.velocity = new Vector2(animator.GetFloat("XInput"),animator.GetFloat("YInput")) * dashSpeed;
         yield return new WaitForSeconds(dashDuration);
         body.velocity = Vector2.zero;
         animator.SetBool("isDashing", false);
