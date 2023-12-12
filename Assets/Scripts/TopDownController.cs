@@ -12,10 +12,18 @@ public class TopDownController : MonoBehaviour {
     private Animator animator;
     private Vector2 moveInput;
 
+    [Header("Dash Settings")]
+    [SerializeField] float dashSpeed = 6f;
+    [SerializeField] float dashDuration = 0.2f;
+    [SerializeField] float dashCooldown = 0.5f;
+    bool isDashing;
+    bool canDash;
+
     // Purpose: Start is called before the first frame update
     void Start() {
         body = GetComponent<Rigidbody2D>();  // get a reference to the rigid body component of this object
         animator = GetComponent<Animator>(); //         ''           animator controller         ''
+        canDash = true;
     }
 
     // Purpose: OnMove is called each time a player control key is pressed (look at Assets/Player.inputactions
@@ -23,6 +31,10 @@ public class TopDownController : MonoBehaviour {
     // More about Unity's "new" (it's really been around for a while now) input system here: 
     // https://gamedevbeginner.com/input-in-unity-made-easy-complete-guide-to-the-new-system/
     public void OnMove(InputValue value) {
+        if (isDashing)
+        {
+            return;
+        }
         moveInput = value.Get<Vector2>();
         // only set the animation direction if the player is trying to move
         if (moveInput != Vector2.zero) {
@@ -33,18 +45,39 @@ public class TopDownController : MonoBehaviour {
 
     // Purpose: Update is called once per frame
     void Update() {
+        if (isDashing)
+        {
+            return;
+        }
+        if (Input.GetKey(KeyCode.Space) && canDash)
+        {
+            StartCoroutine(Dash());
+        }
         if (moveInput != Vector2.zero) {
             targetSpeed = moveSpeed;
             animator.SetBool("isWalking", true);
+            // The following line performs some basic smoothening on our values to create more
+            // fluid animations - they are still janky but we'll optimize them later
+            currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, Time.fixedDeltaTime);
+            Vector2 moveVector = moveInput * currentSpeed * Time.fixedDeltaTime;
+            body.MovePosition(body.position + moveVector);
         } else {
             targetSpeed = 0;
             animator.SetBool("isWalking", false);
         }
-        
-        // The following line performs some basic smoothening on our values to create more
-        // fluid animations - they are still janky but we'll optimize them later
-        currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, Time.fixedDeltaTime);
-        Vector2 moveVector = moveInput * currentSpeed * Time.fixedDeltaTime;
-        body.MovePosition(body.position + moveVector);
+    }
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        animator.SetBool("isDashing", true);
+        isDashing = true;
+        body.velocity = moveInput * dashSpeed;
+        yield return new WaitForSeconds(dashDuration);
+        body.velocity = Vector2.zero;
+        animator.SetBool("isDashing", false);
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 }
