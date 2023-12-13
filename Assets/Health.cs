@@ -19,8 +19,8 @@ public class Health : MonoBehaviour
         {
             StartCoroutine(StartIframes());
             health-=damage;
-            if (health <=0)
-                Destroy(gameObject);
+            //if (health <=0)
+                //Destroy(gameObject);
         }
     }
 

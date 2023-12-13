@@ -16,8 +16,11 @@ public class TopDownController : MonoBehaviour {
     [SerializeField] float dashSpeed = 6f;
     [SerializeField] float dashDuration = 0.2f;
     [SerializeField] float dashCooldown = 0.5f;
+
+    [SerializeField] float attackCooldown = 0.5f;
     bool isDashing;
     bool canDash;
+    bool canAttack;
 
     // Purpose: Start is called before the first frame update
     void Start() {
@@ -45,9 +48,13 @@ public class TopDownController : MonoBehaviour {
         {
             return;
         }
-        if (Input.GetKey(KeyCode.Space) && canDash)
+        if (Input.GetKey("space") && canDash)
         {
             StartCoroutine(Dash());
+        }
+        if (Input.GetKey("mouse 0") && canAttack)
+        {
+            StartCoroutine(Attack());
         }
         if (moveInput != Vector2.zero) {
             targetSpeed = moveSpeed;
@@ -66,14 +73,23 @@ public class TopDownController : MonoBehaviour {
     private IEnumerator Dash()
     {
         canDash = false;
+        canAttack = false;
         animator.SetBool("isDashing", true);
         isDashing = true;
         body.velocity = new Vector2(animator.GetFloat("XInput"),animator.GetFloat("YInput")) * dashSpeed;
         yield return new WaitForSeconds(dashDuration);
         body.velocity = Vector2.zero;
         animator.SetBool("isDashing", false);
+        canAttack = true;
         isDashing = false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
+    }
+
+    private IEnumerator Attack()
+    {
+        canAttack = false;
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
     }
 }
