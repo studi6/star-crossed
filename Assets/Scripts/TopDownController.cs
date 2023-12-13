@@ -11,6 +11,10 @@ public class TopDownController : MonoBehaviour {
     private Rigidbody2D body;
     private Animator animator;
     private Vector2 moveInput;
+    private ProjectileAttack ra;
+    private string enemyTag = "Enemy";
+
+    [SerializeField] private GameObject projectile;
 
     [Header("Dash Settings")]
     [SerializeField] float dashSpeed = 6f;
@@ -26,6 +30,7 @@ public class TopDownController : MonoBehaviour {
     void Start() {
         body = GetComponent<Rigidbody2D>();  // get a reference to the rigid body component of this object
         animator = GetComponent<Animator>(); //         ''           animator controller         ''
+        ra = GetComponent<ProjectileAttack>();
         canDash = true;
     }
 
@@ -52,7 +57,7 @@ public class TopDownController : MonoBehaviour {
         {
             StartCoroutine(Dash());
         }
-        if (Input.GetKey("mouse 0") && canAttack)
+        if (Input.GetKey("mouse 0") && canAttack  && isDashing == false)
         {
             StartCoroutine(Attack());
         }
@@ -73,14 +78,12 @@ public class TopDownController : MonoBehaviour {
     private IEnumerator Dash()
     {
         canDash = false;
-        canAttack = false;
         animator.SetBool("isDashing", true);
         isDashing = true;
         body.velocity = new Vector2(animator.GetFloat("XInput"),animator.GetFloat("YInput")) * dashSpeed;
         yield return new WaitForSeconds(dashDuration);
         body.velocity = Vector2.zero;
         animator.SetBool("isDashing", false);
-        canAttack = true;
         isDashing = false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
@@ -89,6 +92,7 @@ public class TopDownController : MonoBehaviour {
     private IEnumerator Attack()
     {
         canAttack = false;
+        ra.RangedAttack(projectile, transform, Camera.main.ScreenToWorldPoint(Input.mousePosition), 10f, enemyTag);
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
     }

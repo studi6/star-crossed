@@ -4,24 +4,38 @@ public class PlayerCrosshair : MonoBehaviour
 {
     private Vector3 targetPosition;
     [SerializeField] private GameObject player;
-    private Transform playerTransform;
-    private Transform crosshairTransform;
     [SerializeField] private float maxDistance = 10f;
 
-    private void Start()
+    #region Singleton
+    public static PlayerCrosshair instance;
+
+    private void Awake()
     {
-        playerTransform = player.transform;
-        crosshairTransform = transform;
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+        player = GameObject.FindWithTag("Player");
+    }
+    #endregion
+
+    public Vector3 GetMousePosition()
+    {
+        Vector3 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - player.transform.position;
+        if (direction.magnitude > maxDistance)
+        {
+            direction = direction.normalized * 10f;
+        }
+        return direction;
     }
 
     private void Update()
     {
-        targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 direction = targetPosition - playerTransform.position;
-        if (direction.magnitude > maxDistance)
-        {
-            direction = direction.normalized * maxDistance;
-        }
-        crosshairTransform.position = playerTransform.position + new Vector3(direction.x, direction.y, 0f);
+        Vector3 direction = GetMousePosition();
+        transform.position = player.transform.position + new Vector3(direction.x, direction.y, 0f);
     }
 }
