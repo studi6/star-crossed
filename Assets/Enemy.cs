@@ -11,6 +11,6 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == "Player")
             other.GetComponent<Health>().TakeDamage(attackDamage);
         if (other.gameObject.tag == "Weapon")
-            GetComponent<Health>().TakeDamage();
+            GetComponent<Health>().TakeDamage(1);
     }
 }

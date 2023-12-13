@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+/*using System.Collections.Generic;
 using UnityEngine;
 
 public class ProjectileAttack : MonoBehaviour
@@ -16,4 +16,4 @@ public class ProjectileAttack : MonoBehaviour
         if (other.gameObject.tag == "Weapon")
             GetComponent<Health>().TakeDamage(1);
     }
-}
+}*/

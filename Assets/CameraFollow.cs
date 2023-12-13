@@ -14,8 +14,7 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        var newPos = target.position;
-        transform.position = new Vector3(target.position.x, target.position.y, -10f);
+        var newPos = new Vector3(target.position.x, target.position.y, -10f);
         transform.position = Vector3.Slerp(transform.position, newPos,followSpeed*Time.deltaTime);
     }
 }

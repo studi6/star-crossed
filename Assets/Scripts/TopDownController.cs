@@ -11,8 +11,7 @@ public class TopDownController : MonoBehaviour {
     private Rigidbody2D body;
     private Animator animator;
     private Vector2 moveInput;
-    private ProjectileAttack ra;
-    private string enemyTag = "Enemy";
+    //private ProjectileAttack ra;
 
     [SerializeField] private GameObject projectile;
 
@@ -30,7 +29,7 @@ public class TopDownController : MonoBehaviour {
     void Start() {
         body = GetComponent<Rigidbody2D>();  // get a reference to the rigid body component of this object
         animator = GetComponent<Animator>(); //         ''           animator controller         ''
-        ra = GetComponent<ProjectileAttack>();
+        //ra = GetComponent<ProjectileAttack>();
         canDash = true;
     }
 
@@ -92,7 +91,7 @@ public class TopDownController : MonoBehaviour {
     private IEnumerator Attack()
     {
         canAttack = false;
-        ra.RangedAttack(projectile, transform, Camera.main.ScreenToWorldPoint(Input.mousePosition), 10f, enemyTag);
+        //ra.RangedAttack(projectile, transform, Camera.main.ScreenToWorldPoint(Input.mousePosition), 10f, enemyTag);
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
     }
