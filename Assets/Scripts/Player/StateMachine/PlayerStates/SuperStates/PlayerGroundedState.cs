@@ -11,10 +11,12 @@ public class PlayerGroundedState : PlayerState {
     ) : base(player, playerStateMachine, playerData, animationBooleanName) {
         
     }
-    protected Vector2 input;
+    protected int xInput;
+    protected int yInput;
 
     public override void LogicUpdate() {
         base.LogicUpdate();
-        input = player.InputHandler.MovementInput;
+        xInput = player.InputHandler.NormalInputX;
+        yInput = player.InputHandler.NormalInputY;
     }
 }

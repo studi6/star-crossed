@@ -12,9 +12,15 @@ public class PlayerIdleState : PlayerGroundedState {
         
     }
 
+    public override void Enter() {
+        base.Enter();
+        player.SetVelocityX(0, false);
+        player.SetVelocityY(0, false);
+    }
+
     public override void LogicUpdate() {
         base.LogicUpdate();
-        if (input.x != 0) {
+        if (xInput != 0 || yInput != 0) {
             playerStateMachine.ChangeState(player.MoveState);
         }
     }
