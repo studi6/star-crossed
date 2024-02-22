@@ -10,11 +10,14 @@ public class Player : MonoBehaviour {
     public PlayerInputHandler InputHandler { get; private set; }
     public Rigidbody2D Rigidbody { get; private set; }
     public Vector2 CurrentVelocity { get; private set; }
+    
+    public int health;
 
     private Vector2 workspace;
 
     [SerializeField]
     private PlayerData playerData;
+    private const int MAXHEALTH = 100;
     private void Awake() {
         StateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "isIdle");
@@ -26,6 +29,8 @@ public class Player : MonoBehaviour {
         InputHandler = GetComponent<PlayerInputHandler>();
         Rigidbody = GetComponent<Rigidbody2D>();
         StateMachine.Initialize(IdleState);
+        health = MAXHEALTH;
+        Debug.Log("Player health initiated"); // console log check
     }
 
     private void Update() {
@@ -53,5 +58,19 @@ public class Player : MonoBehaviour {
         }
         Rigidbody.velocity = workspace;
         CurrentVelocity = workspace;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            health -= 10; // default damage amount, may eventually depend on bullet/enemy type?
+            Debug.Log("Player Health: " + health); // console log check
+
+            if (health <= 0)
+            {
+                Debug.Log("Player is dead"); // console log check
+            }
+        }
     }
 }
