@@ -60,17 +60,23 @@ public class Player : MonoBehaviour {
         CurrentVelocity = workspace;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamage(int damage)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            health -= 10; // default damage amount, may eventually depend on bullet/enemy type?
-            Debug.Log("Player Health: " + health); // console log check
+        health -= damage; // damage amount depend on Bullet script
+        Debug.Log("Player Health: " + health); // console log check
 
-            if (health <= 0)
-            {
-                Debug.Log("Player is dead"); // console log check
-            }
+        if (health <= 0) {
+            Debug.Log("Player is dead"); // console log check
+        } 
+    }
+
+    public void ReplenishHealth(int heal)
+    {
+        if (health < MAXHEALTH) {
+            health += heal; // heal amount depend on HealItem script
+            Debug.Log("Player Health: " + health); // console log check
+        } else {
+            Debug.Log("Player at max health"); // console log check
         }
     }
 }
