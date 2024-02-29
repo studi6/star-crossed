@@ -5,11 +5,11 @@ using UnityEngine;
 public class HealItem : MonoBehaviour
 {
     [SerializeField]
-    private int heal;
+    private float heal;
     // Start is called before the first frame update
     void Start()
     {
-        heal = 10; // placeholder amount
+        heal = 10f; // placeholder amount
     }
 
     public void OnCollisionEnter2D(Collision2D collision) 
@@ -19,7 +19,6 @@ public class HealItem : MonoBehaviour
             HealthSystem health = collision.gameObject.GetComponent<HealthSystem>();
             if (health != null) {
                 health.ReplenishHealth(heal); // call function in HealthSystem.cs
-                Debug.Log("Entity should gain health"); // console check
             }
         }
     }

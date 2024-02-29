@@ -5,11 +5,11 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField]
-    private int damage;
+    private float damage;
     // Start is called before the first frame update
     void Start()
     {
-        damage = 10; // placeholder value
+        damage = 10f; // placeholder value
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -19,7 +19,6 @@ public class Bullet : MonoBehaviour
             HealthSystem health = collision.gameObject.GetComponent<HealthSystem>();
             if (health != null) {
                 health.TakeDamage(damage); // call function in HealthSystem.cs
-                Debug.Log("Entity should take damage"); // console check
             }
         }
     }
