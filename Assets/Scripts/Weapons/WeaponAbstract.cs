@@ -6,9 +6,12 @@ public abstract class WeaponAbstract : MonoBehaviour
 {
     public GameObject bullet;
     public int currentClipAmmo;
-    public int clipAmmo;
+    public int maxClipAmmo;
     public int totalAmmo;
     public float bulletVelocity;
+    public float reloadTime;
+    public float recoil;
+    public float shotVisibility;
 
     // Start is called before the first frame update
     void Start()
@@ -16,24 +19,32 @@ public abstract class WeaponAbstract : MonoBehaviour
 
     }
 
-    protected void fireBullet()
+    protected void fire()
     {
         // fire bullet (mouse1)
         if (Input.GetMouseButtonDown(0) && (currentClipAmmo > 0))
         {
+            Debug.Log("firing...");
             GameObject projectile = Instantiate(bullet, transform.position, transform.rotation);
             projectile.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletVelocity, ForceMode2D.Impulse);
             currentClipAmmo--;
         }
     }
 
-    protected void reloadBullet()
+    IEnumerator reloadWait() {
+        yield return new WaitForSeconds(reloadTime);
+        totalAmmo = totalAmmo - (maxClipAmmo - currentClipAmmo);
+        currentClipAmmo = maxClipAmmo;
+        Debug.Log("reloaded");
+    }
+
+    protected void reload()
     {
         // reload weapon (r)
-        if (Input.GetKey("r"))
+        if (Input.GetKeyDown("r") && (currentClipAmmo < maxClipAmmo))
         {
-            totalAmmo = totalAmmo - (clipAmmo - currentClipAmmo);
-            currentClipAmmo = clipAmmo;
+            Debug.Log("reloading...");
+            StartCoroutine(reloadWait());
         }
     }
 

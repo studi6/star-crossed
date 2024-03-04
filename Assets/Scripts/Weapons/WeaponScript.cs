@@ -10,16 +10,17 @@ public class WeaponScript : WeaponAbstract
     // Start is called before the first frame update
     void Start()
     {
-        clipAmmo = 10;
+        maxClipAmmo = 10;
         totalAmmo = 100;
-        currentClipAmmo = clipAmmo;
+        currentClipAmmo = maxClipAmmo;
         bulletVelocity = 20;
+        reloadTime = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        fireBullet();
-        reloadBullet();
+        fire();
+        reload();
     }
 }
