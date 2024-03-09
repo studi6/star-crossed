@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Heal
+  - Interaction
   layers:
   - Default
   - TransparentFX
