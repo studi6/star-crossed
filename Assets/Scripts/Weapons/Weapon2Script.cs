@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponScript : WeaponAbstract
+public class Weapon2Script : WeaponAbstract
 {
     // Start is called before the first frame update
     void Start()
     {
-        maxClipAmmo = 10;
-        totalAmmo = 100;
+        maxClipAmmo = 5;
+        totalAmmo = 50;
         currentClipAmmo = maxClipAmmo;
-        bulletVelocity = 20;
-        reloadTime = 1;
+        bulletVelocity = 50;
+        reloadTime = 2;
     }
 
     // Update is called once per frame

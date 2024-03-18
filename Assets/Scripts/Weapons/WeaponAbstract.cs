@@ -12,11 +12,11 @@ public abstract class WeaponAbstract : MonoBehaviour
     public float reloadTime;
     public float recoil;
     public float shotVisibility;
+    public bool active;
 
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     protected void fire()
