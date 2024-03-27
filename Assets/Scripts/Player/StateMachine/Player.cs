@@ -54,4 +54,10 @@ public class Player : MonoBehaviour {
         Rigidbody.velocity = workspace;
         CurrentVelocity = workspace;
     }
+
+    public void OnCollisionStay2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Interaction" && Input.GetKeyDown(KeyCode.E)) {
+            Debug.Log("Player interacted");
+        }
+    }
 }
