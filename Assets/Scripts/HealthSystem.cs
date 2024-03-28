@@ -28,6 +28,8 @@ public class HealthSystem : MonoBehaviour
     {
         if (health < MAXHEALTH) {
             health += heal; // heal amount depend on HealItem script
+            if (health> MAXHEALTH)
+                health= MAXHEALTH;
             Debug.Log("Entity Health: " + health); // console log check
         } else {
             Debug.Log("Entity at max health"); // console log check

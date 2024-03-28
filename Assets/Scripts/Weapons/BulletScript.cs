@@ -5,16 +5,14 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     public Rigidbody2D rb;
+    private float timer;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        timer += Time.deltaTime;
+        if (timer > 2)
+        {
+            Destroy(gameObject);
+        }
     }
 }

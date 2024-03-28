@@ -10,46 +10,43 @@ public abstract class WeaponAbstract : MonoBehaviour
     public int totalAmmo;
     public float bulletVelocity;
     public float reloadTime;
+    public float fireRate;
     public float recoil;
     public float shotVisibility;
     public bool active;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+    private bool canFire = true;  
 
-    protected void fire()
+    void Update()
     {
-        // fire bullet (mouse1)
-        if (Input.GetMouseButtonDown(0) && (currentClipAmmo > 0))
-        {
-            Debug.Log("firing...");
-            GameObject projectile = Instantiate(bullet, transform.position, transform.rotation);
-            projectile.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletVelocity, ForceMode2D.Impulse);
-            currentClipAmmo--;
+        if (Input.GetMouseButton(0) && canFire && (currentClipAmmo > 0)){
+            Fire();
         }
+        if (Input.GetKeyDown("r") && (currentClipAmmo < maxClipAmmo)){
+            Debug.Log("reloading...");
+            StartCoroutine(ReloadWait());
+        }
+    }  
+
+    protected void Fire()
+    {
+        Debug.Log("firing...");
+        GameObject projectile = Instantiate(bullet, transform.position, transform.rotation);
+        projectile.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletVelocity, ForceMode2D.Impulse);
+        currentClipAmmo--;
+        StartCoroutine(FireRateCooldown()); 
     }
 
-    IEnumerator reloadWait() {
+    IEnumerator FireRateCooldown(){
+        canFire = false; 
+        yield return new WaitForSeconds(fireRate);
+        canFire = true;
+    }
+
+    IEnumerator ReloadWait() {
         yield return new WaitForSeconds(reloadTime);
         totalAmmo = totalAmmo - (maxClipAmmo - currentClipAmmo);
         currentClipAmmo = maxClipAmmo;
         Debug.Log("reloaded");
-    }
-
-    protected void reload()
-    {
-        // reload weapon (r)
-        if (Input.GetKeyDown("r") && (currentClipAmmo < maxClipAmmo))
-        {
-            Debug.Log("reloading...");
-            StartCoroutine(reloadWait());
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 }
