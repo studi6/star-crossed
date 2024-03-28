@@ -174,6 +174,7 @@ MonoBehaviour:
   totalAmmo: 0
   bulletVelocity: 0
   reloadTime: 0
+  fireRate: 0
   recoil: 0
   shotVisibility: 0
   active: 0
@@ -342,6 +343,7 @@ MonoBehaviour:
   totalAmmo: 0
   bulletVelocity: 0
   reloadTime: 0
+  fireRate: 0
   recoil: 0
   shotVisibility: 0
   active: 0
