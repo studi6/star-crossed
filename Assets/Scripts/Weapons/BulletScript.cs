@@ -22,7 +22,7 @@ public abstract class BulletScript : MonoBehaviour
         float distance = Vector3.Distance(initialPosition, transform.position);
         if (distance >= maxDistance)
         {
-            //Destroy(gameObject); 
+            Destroy(gameObject); 
         }
     }
 }

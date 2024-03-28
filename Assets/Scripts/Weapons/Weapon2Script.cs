@@ -9,15 +9,9 @@ public class Weapon2Script : WeaponAbstract
     {
         maxClipAmmo = 5;
         totalAmmo = 50;
+        fireRate = 0.4f;
         currentClipAmmo = maxClipAmmo;
         bulletVelocity = 50;
         reloadTime = 2;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        fire();
-        reload();
     }
 }
