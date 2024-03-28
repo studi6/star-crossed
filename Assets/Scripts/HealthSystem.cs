@@ -19,9 +19,13 @@ public class HealthSystem : MonoBehaviour
         {
             health -= damage; // damage amount depend on Bullet script
             Debug.Log("Entity Health: " + health); // console log check
-        } else {
-            Debug.Log("Entity is dead"); // console log check
-        } 
+            if (health <= 0f) {
+                Debug.Log("Entity is dead"); // console log check
+                if (gameObject.CompareTag("Enemy")) {
+                    Destroy(gameObject);
+                }
+            }
+        }
     }
 
     public void ReplenishHealth(float heal)
