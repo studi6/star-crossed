@@ -2,17 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletScript : MonoBehaviour
+public abstract class BulletScript : MonoBehaviour
 {
     public Rigidbody2D rb;
-    private float timer;
+    private Vector3 initialPosition;
 
-    private void Update()
+    [SerializeField]
+    private float maxDistance;
+    // Start is called before the first frame update
+    void Start()
     {
-        timer += Time.deltaTime;
-        if (timer > 2)
+        initialPosition = transform.position;
+        maxDistance = 100f; // placeholder value
+    }
+
+    void Update()
+    {
+        // remove bullet when too far from initial position
+        float distance = Vector3.Distance(initialPosition, transform.position);
+        if (distance >= maxDistance)
         {
-            Destroy(gameObject);
+            Destroy(gameObject); 
         }
     }
 }
