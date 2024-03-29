@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8c69c1fb5f75b0040a5267eea504538f
+guid: 5a403d7c4d01ce844a161d1cf74b7d3e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,9 +47,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -105,400 +105,505 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_0
+      name: deucessprites_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf8fa10101412d47947c49e3ee7a9bc
+      internalID: -1383729894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 34
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d469d5e667bdace46b82ea51f3fc9256
+      internalID: -790889762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 34
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6026106a26f0b7b4abf55148961643ba
+      internalID: 1747346343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 34
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d36edd71d5d2645947addf32f3ffe8
+      internalID: -946025144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 34
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff5239f43666a744885eaa151dae161
+      internalID: 706598810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 34
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1baa5241a58ce344c981a4759488332c
+      internalID: -1308737934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 34
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57d97ef266d7894399508a0d7ba1970
+      internalID: -1721595925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_7
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 34
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb86e94d2a519ca46bc4b8e2a2221f0c
+      internalID: -2101407767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 17
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3fd8081e14d5b4d8d1af565970035f
+      internalID: -1847340284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 17
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04569ea25d9faa40a3157ca7eb6ac23
+      internalID: 1408006050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 17
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8beffd54b5af5a14c85e6d79c77005f5
+      internalID: -1279813165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 17
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ad3b738b7d31a48b109970852df296
+      internalID: -2003312855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_12
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 17
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cec0f1994ef8d5479101215cbbaddc0
+      internalID: 1269227387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_13
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 17
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f290d91c2e04d6b46898ed573bc441e8
+      internalID: -1957854020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_14
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 17
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff5fce83b8c6fb46ae50e46b2db0f6f
+      internalID: 1532925529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_15
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 17
+        width: 17
+        height: 17
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bffde702dc82a1247ad17c57e1157f9d
+      internalID: -970510185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_16
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 17
         height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b20ca80ea3c83d142af93f94bd73dd32
-      internalID: 1196202060
+      spriteID: 8775d0155545d934c9ef0e794aaa7f20
+      internalID: -1409673387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_1
+      name: deucessprites_17
       rect:
         serializedVersion: 2
         x: 17
         y: 0
         width: 17
         height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df23c5909977d794881f445ef2608da6
-      internalID: 1055320199
+      spriteID: cacdb5dfaf8241441949ff622177ff7d
+      internalID: -1924323071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_2
+      name: deucessprites_18
       rect:
         serializedVersion: 2
         x: 34
         y: 0
         width: 17
         height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4e96e9eee7c4ae4f80a5f2810d5245a
-      internalID: 1065939392
+      spriteID: 6a9e308d4610b0e47a35ce698641159e
+      internalID: 1861966345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_3
+      name: deucessprites_19
       rect:
         serializedVersion: 2
         x: 51
         y: 0
         width: 17
         height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16992caac1fac0f4cab1c76bbf1c3114
-      internalID: -195753690
+      spriteID: 2c2b737c67f51df40ad1d7b9e7111c07
+      internalID: 1000805394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_4
+      name: deucessprites_20
       rect:
         serializedVersion: 2
         x: 68
         y: 0
         width: 17
         height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15addd37a35090147aba510877f000ce
-      internalID: 1269038811
+      spriteID: 95899edae6f067e4d9a6ebd48d1b9f73
+      internalID: -24283886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_5
+      name: deucessprites_21
       rect:
         serializedVersion: 2
         x: 85
         y: 0
         width: 17
         height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28a7897ac354d1449a888519815d8a50
-      internalID: -398605693
+      spriteID: 117876ba4a8a6da4290c720ec859f93d
+      internalID: -604975289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_6
+      name: deucessprites_22
       rect:
         serializedVersion: 2
         x: 102
         y: 0
         width: 17
         height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af76cfd5245509142a31d73484d9d6fb
-      internalID: -1393946846
+      spriteID: d0a989825a03b604582344014845954c
+      internalID: -1017808191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_7
+      name: deucessprites_23
       rect:
         serializedVersion: 2
         x: 119
         y: 0
         width: 17
         height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85f93a0eb9bc4fe4a86869a842d08182
-      internalID: 2042025357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 0
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b03b1096d7da1647aa0ff5632a3dfa4
-      internalID: 1640898476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 153
-        y: 0
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d294a4cc9398cd2458426ecaf718a05a
-      internalID: -1478051122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 0
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eea14a04b5120b24aa273e995bbd8e4c
-      internalID: 768118482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 187
-        y: 0
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2211e6036d9f2c44f9c22a2f96b506d0
-      internalID: 1954847854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 0
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4dbd4fcef9620145a5f152f00198ac3
-      internalID: 1515331382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 221
-        y: 0
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d9f48d23bac3374c8738187c4d9ea3a
-      internalID: -2008645757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 238
-        y: 0
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a24d792f51ac307439386b4606ffa3e3
-      internalID: -943975784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 255
-        y: 0
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c89c0dfb3d2f8154a8eb2153593ccc67
-      internalID: -33937184
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 0
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3949871d3562de44593fb43e6a1634c1
-      internalID: -373267733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 0
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d017b096bfd84c4291ecbbda1014eac
-      internalID: 795231113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Deuce_FullSprites-Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 0
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6aada195103bd04ca2e2048599b568c
-      internalID: 652491246
+      spriteID: 74e5104ea6b8f7f4caee2668587bf253
+      internalID: 677038936
       vertices: []
       indices: 
       edges: []
@@ -514,25 +619,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Deuce_FullSprites-Sheet_6: -1393946846
-      Deuce_FullSprites-Sheet_10: 768118482
-      Deuce_FullSprites-Sheet_8: 1640898476
-      Deuce_FullSprites-Sheet_4: 1269038811
-      Deuce_FullSprites-Sheet_12: 1515331382
-      Deuce_FullSprites-Sheet_18: 652491246
-      Deuce_FullSprites-Sheet_9: -1478051122
-      Deuce_FullSprites-Sheet_1: 1055320199
-      Deuce_FullSprites-Sheet_3: -195753690
-      Deuce_FullSprites-Sheet_15: -33937184
-      Deuce_FullSprites-Sheet_13: -2008645757
-      Deuce_FullSprites-Sheet_14: -943975784
-      Deuce_FullSprites-Sheet_7: 2042025357
-      Deuce_FullSprites-Sheet_16: -373267733
-      Deuce_FullSprites-Sheet_0: 1196202060
-      Deuce_FullSprites-Sheet_17: 795231113
-      Deuce_FullSprites-Sheet_5: -398605693
-      Deuce_FullSprites-Sheet_11: 1954847854
-      Deuce_FullSprites-Sheet_2: 1065939392
+      deucessprites_3: -946025144
+      deucessprites_9: 1408006050
+      deucessprites_4: 706598810
+      deucessprites_23: 677038936
+      deucessprites_0: -1383729894
+      deucessprites_7: -2101407767
+      deucessprites_11: -2003312855
+      deucessprites_17: -1924323071
+      deucessprites_12: 1269227387
+      deucessprites_14: 1532925529
+      deucessprites_19: 1000805394
+      deucessprites_1: -790889762
+      deucessprites_6: -1721595925
+      deucessprites_5: -1308737934
+      deucessprites_8: -1847340284
+      deucessprites_21: -604975289
+      deucessprites_2: 1747346343
+      deucessprites_15: -970510185
+      deucessprites_18: 1861966345
+      deucessprites_22: -1017808191
+      deucessprites_13: -1957854020
+      deucessprites_20: -24283886
+      deucessprites_10: -1279813165
+      deucessprites_16: -1409673387
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
