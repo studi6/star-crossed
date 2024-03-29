@@ -264,7 +264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7167ccefaf6224e85adc4bdf4337d5f1, type: 3}
---- !u!1001 &7213965272919914012
+--- !u!1001 &1636601516
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -277,7 +277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6634942255666931341, guid: 783e37e86bf1041d6b6127584473c1c4, type: 3}
       propertyPath: m_Name
-      value: brick_normal
+      value: brick_normal (1)
       objectReference: {fileID: 0}
     - target: {fileID: 9026626236149238843, guid: 783e37e86bf1041d6b6127584473c1c4, type: 3}
       propertyPath: m_RootOrder
@@ -293,11 +293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9026626236149238843, guid: 783e37e86bf1041d6b6127584473c1c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 3.22
       objectReference: {fileID: 0}
     - target: {fileID: 9026626236149238843, guid: 783e37e86bf1041d6b6127584473c1c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -0.64
       objectReference: {fileID: 0}
     - target: {fileID: 9026626236149238843, guid: 783e37e86bf1041d6b6127584473c1c4, type: 3}
       propertyPath: m_LocalPosition.z

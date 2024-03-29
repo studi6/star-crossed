@@ -17,14 +17,18 @@ public class InteractionItem : MonoBehaviour
         render.sprite = brick_normal;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Player") {
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
             render.sprite = brick_selected;
         }
     }
-
-    private void OnCollisionExit2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Player") {
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
             render.sprite = brick_normal;
         }
     }
