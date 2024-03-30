@@ -8,6 +8,7 @@ public class KnobAndBonk : MonoBehaviour
     public Transform target;
     public float moveSpeed = 2.5f;
     private bool isAttacking = false;
+    private int attackStage = 0;
 
     void Start()
     {
@@ -18,14 +19,16 @@ public class KnobAndBonk : MonoBehaviour
 
     void Update()
     {
-        if (!isAttacking && target != null)
-        {
+        if (target != null) {
             Vector3 direction = (target.position - transform.position).normalized;
             transform.position += direction * moveSpeed * Time.deltaTime;
 
-            if (direction.magnitude > 0.1f)
-            {
+            if (!isAttacking && direction.magnitude > 0.1f){
                 anim.SetInteger("state", 0); // Idle state
+            } else {
+                // maintains attack pattern
+                attackPattern();
+                attackStage += 1;
             }
         }
     }
@@ -72,5 +75,42 @@ public class KnobAndBonk : MonoBehaviour
                 anim.SetInteger("state", 0); // Set idle state if target is null
             }
         }
+    }
+
+    private void attackPattern() {
+        switch(attackStage % 12){
+            case 3:
+                lazerBeam();
+                break;
+            case 7:
+                jumpAttack();
+                break;
+            case 11:
+                bulletCircle();
+                break;
+            default: 
+                basicAttack();
+                break;
+        }
+    }
+
+    private void lazerBeam() {
+        Debug.Log("attack 1"); // console log check
+        // TODO
+    }
+
+    private void jumpAttack() {
+        Debug.Log("attack 2"); // console log check
+        // TODO
+    }
+
+    private void bulletCircle() {
+        Debug.Log("attack 3"); // console log check
+        // TODO
+    }
+
+    private void basicAttack() {
+        Debug.Log("basic attack"); // console log check
+        // TODO
     }
 }
