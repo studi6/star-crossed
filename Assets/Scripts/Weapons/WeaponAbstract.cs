@@ -23,14 +23,12 @@ public abstract class WeaponAbstract : MonoBehaviour
             Fire();
         }
         if (Input.GetKeyDown("r") && (currentClipAmmo < maxClipAmmo)){
-            Debug.Log("reloading...");
             StartCoroutine(ReloadWait());
         }
     }  
 
     protected void Fire()
     {
-        Debug.Log("firing...");
         GameObject projectile = Instantiate(bullet, transform.position, transform.rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletVelocity, ForceMode2D.Impulse);
         currentClipAmmo--;
@@ -47,6 +45,5 @@ public abstract class WeaponAbstract : MonoBehaviour
         yield return new WaitForSeconds(reloadTime);
         totalAmmo = totalAmmo - (maxClipAmmo - currentClipAmmo);
         currentClipAmmo = maxClipAmmo;
-        Debug.Log("reloaded");
     }
 }
