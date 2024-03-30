@@ -314,6 +314,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: knob_idel-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3282907c793f75b41ab24f4fd4352eb7
+      internalID: 119085232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -331,6 +352,7 @@ TextureImporter:
       knob_idel-Sheet_1: -167045778
       knob_idel-Sheet_5: 2092376416
       knob_idel-Sheet_6: 894133960
+      knob_idel-Sheet_10: 119085232
       knob_idel-Sheet_3: 354263902
       knob_idel-Sheet_8: -274049882
       knob_idel-Sheet_2: 46051301
