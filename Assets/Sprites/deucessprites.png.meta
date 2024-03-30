@@ -108,7 +108,7 @@ TextureImporter:
       name: deucessprites_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 34
         width: 17
         height: 17
@@ -129,7 +129,7 @@ TextureImporter:
       name: deucessprites_1
       rect:
         serializedVersion: 2
-        x: 18
+        x: 17
         y: 34
         width: 17
         height: 17
@@ -150,7 +150,7 @@ TextureImporter:
       name: deucessprites_2
       rect:
         serializedVersion: 2
-        x: 35
+        x: 34
         y: 34
         width: 17
         height: 17
@@ -171,7 +171,7 @@ TextureImporter:
       name: deucessprites_3
       rect:
         serializedVersion: 2
-        x: 52
+        x: 51
         y: 34
         width: 17
         height: 17
@@ -192,7 +192,7 @@ TextureImporter:
       name: deucessprites_4
       rect:
         serializedVersion: 2
-        x: 69
+        x: 68
         y: 34
         width: 17
         height: 17
@@ -213,7 +213,7 @@ TextureImporter:
       name: deucessprites_5
       rect:
         serializedVersion: 2
-        x: 86
+        x: 85
         y: 34
         width: 17
         height: 17
@@ -234,7 +234,7 @@ TextureImporter:
       name: deucessprites_6
       rect:
         serializedVersion: 2
-        x: 103
+        x: 102
         y: 34
         width: 17
         height: 17
@@ -255,8 +255,8 @@ TextureImporter:
       name: deucessprites_7
       rect:
         serializedVersion: 2
-        x: 1
-        y: 17
+        x: 119
+        y: 34
         width: 17
         height: 17
       alignment: 0
@@ -276,7 +276,7 @@ TextureImporter:
       name: deucessprites_8
       rect:
         serializedVersion: 2
-        x: 18
+        x: 0
         y: 17
         width: 17
         height: 17
@@ -297,7 +297,7 @@ TextureImporter:
       name: deucessprites_9
       rect:
         serializedVersion: 2
-        x: 35
+        x: 17
         y: 17
         width: 17
         height: 17
@@ -318,7 +318,7 @@ TextureImporter:
       name: deucessprites_10
       rect:
         serializedVersion: 2
-        x: 52
+        x: 34
         y: 17
         width: 17
         height: 17
@@ -339,7 +339,7 @@ TextureImporter:
       name: deucessprites_11
       rect:
         serializedVersion: 2
-        x: 69
+        x: 51
         y: 17
         width: 17
         height: 17
@@ -360,7 +360,7 @@ TextureImporter:
       name: deucessprites_12
       rect:
         serializedVersion: 2
-        x: 86
+        x: 68
         y: 17
         width: 17
         height: 17
@@ -381,7 +381,7 @@ TextureImporter:
       name: deucessprites_13
       rect:
         serializedVersion: 2
-        x: 103
+        x: 85
         y: 17
         width: 17
         height: 17
@@ -402,8 +402,8 @@ TextureImporter:
       name: deucessprites_14
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
+        x: 102
+        y: 17
         width: 17
         height: 17
       alignment: 0
@@ -423,8 +423,8 @@ TextureImporter:
       name: deucessprites_15
       rect:
         serializedVersion: 2
-        x: 18
-        y: 0
+        x: 119
+        y: 17
         width: 17
         height: 17
       alignment: 0
@@ -444,7 +444,7 @@ TextureImporter:
       name: deucessprites_16
       rect:
         serializedVersion: 2
-        x: 35
+        x: 0
         y: 0
         width: 17
         height: 17
@@ -465,7 +465,7 @@ TextureImporter:
       name: deucessprites_17
       rect:
         serializedVersion: 2
-        x: 52
+        x: 17
         y: 0
         width: 17
         height: 17
@@ -486,7 +486,7 @@ TextureImporter:
       name: deucessprites_18
       rect:
         serializedVersion: 2
-        x: 69
+        x: 34
         y: 0
         width: 17
         height: 17
@@ -507,7 +507,7 @@ TextureImporter:
       name: deucessprites_19
       rect:
         serializedVersion: 2
-        x: 86
+        x: 51
         y: 0
         width: 17
         height: 17
@@ -528,7 +528,7 @@ TextureImporter:
       name: deucessprites_20
       rect:
         serializedVersion: 2
-        x: 103
+        x: 68
         y: 0
         width: 17
         height: 17
@@ -541,6 +541,69 @@ TextureImporter:
       bones: []
       spriteID: bfd31f943b925044aaf614a2c5cb4642
       internalID: -24283886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_21
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679ebabdaa42d1a469e0250bc394d3fe
+      internalID: 2016902550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_22
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bcf3b83c53d18045b1ed3abccecde7e
+      internalID: 286640756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_23
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305d9faf2cdb5474fb614ab5015014ed
+      internalID: -314049130
       vertices: []
       indices: 
       edges: []
@@ -559,6 +622,7 @@ TextureImporter:
       deucessprites_3: -946025144
       deucessprites_9: 1408006050
       deucessprites_4: 706598810
+      deucessprites_23: -314049130
       deucessprites_0: -1383729894
       deucessprites_7: -2101407767
       deucessprites_11: -2003312855
@@ -570,9 +634,11 @@ TextureImporter:
       deucessprites_6: -1721595925
       deucessprites_5: -1308737934
       deucessprites_8: -1847340284
+      deucessprites_21: 2016902550
       deucessprites_2: 1747346343
       deucessprites_15: -970510185
       deucessprites_18: 1861966345
+      deucessprites_22: 286640756
       deucessprites_13: -1957854020
       deucessprites_20: -24283886
       deucessprites_10: -1279813165
