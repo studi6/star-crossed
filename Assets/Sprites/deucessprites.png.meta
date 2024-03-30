@@ -108,12 +108,12 @@ TextureImporter:
       name: deucessprites_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 34
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,12 +129,12 @@ TextureImporter:
       name: deucessprites_1
       rect:
         serializedVersion: 2
-        x: 17
+        x: 18
         y: 34
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,12 +150,12 @@ TextureImporter:
       name: deucessprites_2
       rect:
         serializedVersion: 2
-        x: 34
+        x: 35
         y: 34
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,12 +171,12 @@ TextureImporter:
       name: deucessprites_3
       rect:
         serializedVersion: 2
-        x: 51
+        x: 52
         y: 34
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,12 +192,12 @@ TextureImporter:
       name: deucessprites_4
       rect:
         serializedVersion: 2
-        x: 68
+        x: 69
         y: 34
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,12 +213,12 @@ TextureImporter:
       name: deucessprites_5
       rect:
         serializedVersion: 2
-        x: 85
+        x: 86
         y: 34
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,12 +234,12 @@ TextureImporter:
       name: deucessprites_6
       rect:
         serializedVersion: 2
-        x: 102
+        x: 103
         y: 34
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,12 +255,12 @@ TextureImporter:
       name: deucessprites_7
       rect:
         serializedVersion: 2
-        x: 119
-        y: 34
+        x: 1
+        y: 17
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,12 +276,12 @@ TextureImporter:
       name: deucessprites_8
       rect:
         serializedVersion: 2
-        x: 0
+        x: 18
         y: 17
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -297,12 +297,12 @@ TextureImporter:
       name: deucessprites_9
       rect:
         serializedVersion: 2
-        x: 17
+        x: 35
         y: 17
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -318,18 +318,18 @@ TextureImporter:
       name: deucessprites_10
       rect:
         serializedVersion: 2
-        x: 34
+        x: 52
         y: 17
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8beffd54b5af5a14c85e6d79c77005f5
+      spriteID: 8181315bf7bb15e42a6d780561c6ea05
       internalID: -1279813165
       vertices: []
       indices: 
@@ -339,18 +339,18 @@ TextureImporter:
       name: deucessprites_11
       rect:
         serializedVersion: 2
-        x: 51
+        x: 69
         y: 17
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1ad3b738b7d31a48b109970852df296
+      spriteID: 45962ad49b7bccd4fa92888dd1281b07
       internalID: -2003312855
       vertices: []
       indices: 
@@ -360,18 +360,18 @@ TextureImporter:
       name: deucessprites_12
       rect:
         serializedVersion: 2
-        x: 68
+        x: 86
         y: 17
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cec0f1994ef8d5479101215cbbaddc0
+      spriteID: 590152938ae271a489d9e6b4c86fabf7
       internalID: 1269227387
       vertices: []
       indices: 
@@ -381,18 +381,18 @@ TextureImporter:
       name: deucessprites_13
       rect:
         serializedVersion: 2
-        x: 85
+        x: 103
         y: 17
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f290d91c2e04d6b46898ed573bc441e8
+      spriteID: f6fedfe9388a49449b1c76d2c5224b3a
       internalID: -1957854020
       vertices: []
       indices: 
@@ -402,18 +402,18 @@ TextureImporter:
       name: deucessprites_14
       rect:
         serializedVersion: 2
-        x: 102
-        y: 17
+        x: 1
+        y: 0
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bff5fce83b8c6fb46ae50e46b2db0f6f
+      spriteID: ce78aa54bf2b3824aa2e7d0f94a45c62
       internalID: 1532925529
       vertices: []
       indices: 
@@ -423,18 +423,18 @@ TextureImporter:
       name: deucessprites_15
       rect:
         serializedVersion: 2
-        x: 119
-        y: 17
+        x: 18
+        y: 0
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bffde702dc82a1247ad17c57e1157f9d
+      spriteID: 664e909ebd742204e9565b1c49e410ce
       internalID: -970510185
       vertices: []
       indices: 
@@ -444,18 +444,18 @@ TextureImporter:
       name: deucessprites_16
       rect:
         serializedVersion: 2
-        x: 0
+        x: 35
         y: 0
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8775d0155545d934c9ef0e794aaa7f20
+      spriteID: f66b6653f8e875e4899ae688f3ac0f72
       internalID: -1409673387
       vertices: []
       indices: 
@@ -465,18 +465,18 @@ TextureImporter:
       name: deucessprites_17
       rect:
         serializedVersion: 2
-        x: 17
+        x: 52
         y: 0
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cacdb5dfaf8241441949ff622177ff7d
+      spriteID: 00b9a09b5bdfe9b488ffc8d74f0a882e
       internalID: -1924323071
       vertices: []
       indices: 
@@ -486,18 +486,18 @@ TextureImporter:
       name: deucessprites_18
       rect:
         serializedVersion: 2
-        x: 34
+        x: 69
         y: 0
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a9e308d4610b0e47a35ce698641159e
+      spriteID: 7bbe398ea4831ca498ef237440ba8ecf
       internalID: 1861966345
       vertices: []
       indices: 
@@ -507,18 +507,18 @@ TextureImporter:
       name: deucessprites_19
       rect:
         serializedVersion: 2
-        x: 51
+        x: 86
         y: 0
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c2b737c67f51df40ad1d7b9e7111c07
+      spriteID: 7b43fb1a83a86f341aac1792578d6400
       internalID: 1000805394
       vertices: []
       indices: 
@@ -528,82 +528,19 @@ TextureImporter:
       name: deucessprites_20
       rect:
         serializedVersion: 2
-        x: 68
+        x: 103
         y: 0
         width: 17
         height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95899edae6f067e4d9a6ebd48d1b9f73
+      spriteID: bfd31f943b925044aaf614a2c5cb4642
       internalID: -24283886
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deucessprites_21
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 0
-        width: 17
-        height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 117876ba4a8a6da4290c720ec859f93d
-      internalID: -604975289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deucessprites_22
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 0
-        width: 17
-        height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0a989825a03b604582344014845954c
-      internalID: -1017808191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: deucessprites_23
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 0
-        width: 17
-        height: 17
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74e5104ea6b8f7f4caee2668587bf253
-      internalID: 677038936
       vertices: []
       indices: 
       edges: []
@@ -622,7 +559,6 @@ TextureImporter:
       deucessprites_3: -946025144
       deucessprites_9: 1408006050
       deucessprites_4: 706598810
-      deucessprites_23: 677038936
       deucessprites_0: -1383729894
       deucessprites_7: -2101407767
       deucessprites_11: -2003312855
@@ -634,11 +570,9 @@ TextureImporter:
       deucessprites_6: -1721595925
       deucessprites_5: -1308737934
       deucessprites_8: -1847340284
-      deucessprites_21: -604975289
       deucessprites_2: 1747346343
       deucessprites_15: -970510185
       deucessprites_18: 1861966345
-      deucessprites_22: -1017808191
       deucessprites_13: -1957854020
       deucessprites_20: -24283886
       deucessprites_10: -1279813165
