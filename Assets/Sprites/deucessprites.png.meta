@@ -108,7 +108,7 @@ TextureImporter:
       name: deucessprites_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 34
         width: 17
         height: 17
@@ -129,7 +129,7 @@ TextureImporter:
       name: deucessprites_1
       rect:
         serializedVersion: 2
-        x: 18
+        x: 17
         y: 34
         width: 17
         height: 17
@@ -150,7 +150,7 @@ TextureImporter:
       name: deucessprites_2
       rect:
         serializedVersion: 2
-        x: 35
+        x: 34
         y: 34
         width: 17
         height: 17
@@ -171,7 +171,7 @@ TextureImporter:
       name: deucessprites_3
       rect:
         serializedVersion: 2
-        x: 52
+        x: 51
         y: 34
         width: 17
         height: 17
@@ -192,7 +192,7 @@ TextureImporter:
       name: deucessprites_4
       rect:
         serializedVersion: 2
-        x: 69
+        x: 68
         y: 34
         width: 17
         height: 17
@@ -213,7 +213,7 @@ TextureImporter:
       name: deucessprites_5
       rect:
         serializedVersion: 2
-        x: 86
+        x: 85
         y: 34
         width: 17
         height: 17
@@ -234,7 +234,7 @@ TextureImporter:
       name: deucessprites_6
       rect:
         serializedVersion: 2
-        x: 103
+        x: 102
         y: 34
         width: 17
         height: 17
@@ -255,8 +255,8 @@ TextureImporter:
       name: deucessprites_7
       rect:
         serializedVersion: 2
-        x: 1
-        y: 17
+        x: 119
+        y: 34
         width: 17
         height: 17
       alignment: 0
@@ -276,7 +276,7 @@ TextureImporter:
       name: deucessprites_8
       rect:
         serializedVersion: 2
-        x: 18
+        x: 0
         y: 17
         width: 17
         height: 17
@@ -297,7 +297,7 @@ TextureImporter:
       name: deucessprites_9
       rect:
         serializedVersion: 2
-        x: 35
+        x: 17
         y: 17
         width: 17
         height: 17
@@ -318,7 +318,7 @@ TextureImporter:
       name: deucessprites_10
       rect:
         serializedVersion: 2
-        x: 52
+        x: 34
         y: 17
         width: 17
         height: 17
@@ -329,7 +329,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8181315bf7bb15e42a6d780561c6ea05
+      spriteID: ad46336672f11bc4aa22c5ff828fa233
       internalID: -1279813165
       vertices: []
       indices: 
@@ -339,7 +339,7 @@ TextureImporter:
       name: deucessprites_11
       rect:
         serializedVersion: 2
-        x: 69
+        x: 51
         y: 17
         width: 17
         height: 17
@@ -350,7 +350,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45962ad49b7bccd4fa92888dd1281b07
+      spriteID: d52f6595a66120948a6c6f3fd6b8ce05
       internalID: -2003312855
       vertices: []
       indices: 
@@ -360,7 +360,7 @@ TextureImporter:
       name: deucessprites_12
       rect:
         serializedVersion: 2
-        x: 86
+        x: 68
         y: 17
         width: 17
         height: 17
@@ -371,7 +371,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 590152938ae271a489d9e6b4c86fabf7
+      spriteID: 0185bde250e7b0a4484620a95559bb3f
       internalID: 1269227387
       vertices: []
       indices: 
@@ -381,7 +381,7 @@ TextureImporter:
       name: deucessprites_13
       rect:
         serializedVersion: 2
-        x: 103
+        x: 85
         y: 17
         width: 17
         height: 17
@@ -392,7 +392,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6fedfe9388a49449b1c76d2c5224b3a
+      spriteID: 96f63c8b7a2f90846b53bf4aa1eda32b
       internalID: -1957854020
       vertices: []
       indices: 
@@ -402,8 +402,8 @@ TextureImporter:
       name: deucessprites_14
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
+        x: 102
+        y: 17
         width: 17
         height: 17
       alignment: 0
@@ -413,7 +413,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce78aa54bf2b3824aa2e7d0f94a45c62
+      spriteID: ada3c9e9bfbfa39498dc6f0f5ff45c66
       internalID: 1532925529
       vertices: []
       indices: 
@@ -423,8 +423,8 @@ TextureImporter:
       name: deucessprites_15
       rect:
         serializedVersion: 2
-        x: 18
-        y: 0
+        x: 119
+        y: 17
         width: 17
         height: 17
       alignment: 0
@@ -434,7 +434,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 664e909ebd742204e9565b1c49e410ce
+      spriteID: 184bfa459da5ba94eb2421235b97b0ce
       internalID: -970510185
       vertices: []
       indices: 
@@ -444,7 +444,7 @@ TextureImporter:
       name: deucessprites_16
       rect:
         serializedVersion: 2
-        x: 35
+        x: 0
         y: 0
         width: 17
         height: 17
@@ -455,7 +455,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f66b6653f8e875e4899ae688f3ac0f72
+      spriteID: 76f578caf5b9fc4449b42a8001b97290
       internalID: -1409673387
       vertices: []
       indices: 
@@ -465,7 +465,7 @@ TextureImporter:
       name: deucessprites_17
       rect:
         serializedVersion: 2
-        x: 52
+        x: 17
         y: 0
         width: 17
         height: 17
@@ -476,7 +476,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00b9a09b5bdfe9b488ffc8d74f0a882e
+      spriteID: aa4f3c4a12df3924284814c6d48a0907
       internalID: -1924323071
       vertices: []
       indices: 
@@ -486,7 +486,7 @@ TextureImporter:
       name: deucessprites_18
       rect:
         serializedVersion: 2
-        x: 69
+        x: 34
         y: 0
         width: 17
         height: 17
@@ -497,7 +497,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bbe398ea4831ca498ef237440ba8ecf
+      spriteID: 55cf20779cff4ec4286a79adfa9faa81
       internalID: 1861966345
       vertices: []
       indices: 
@@ -507,7 +507,7 @@ TextureImporter:
       name: deucessprites_19
       rect:
         serializedVersion: 2
-        x: 86
+        x: 51
         y: 0
         width: 17
         height: 17
@@ -518,7 +518,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b43fb1a83a86f341aac1792578d6400
+      spriteID: c256d0feadf928f47a14606fe06c7ede
       internalID: 1000805394
       vertices: []
       indices: 
@@ -528,7 +528,7 @@ TextureImporter:
       name: deucessprites_20
       rect:
         serializedVersion: 2
-        x: 103
+        x: 68
         y: 0
         width: 17
         height: 17
@@ -539,8 +539,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfd31f943b925044aaf614a2c5cb4642
+      spriteID: b77a2fbde5e5437498975f1b60669f4c
       internalID: -24283886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_21
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab595006534ed345bddcb7e97a84bd1
+      internalID: 1267755410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_22
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864f84f4e390d08459420a7189d51f7a
+      internalID: -1952579977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deucessprites_23
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f90bb4210324241b067e760a8f555b
+      internalID: -679157663
       vertices: []
       indices: 
       edges: []
@@ -559,6 +622,7 @@ TextureImporter:
       deucessprites_3: -946025144
       deucessprites_9: 1408006050
       deucessprites_4: 706598810
+      deucessprites_23: -679157663
       deucessprites_0: -1383729894
       deucessprites_7: -2101407767
       deucessprites_11: -2003312855
@@ -570,9 +634,11 @@ TextureImporter:
       deucessprites_6: -1721595925
       deucessprites_5: -1308737934
       deucessprites_8: -1847340284
+      deucessprites_21: 1267755410
       deucessprites_2: 1747346343
       deucessprites_15: -970510185
       deucessprites_18: 1861966345
+      deucessprites_22: -1952579977
       deucessprites_13: -1957854020
       deucessprites_20: -24283886
       deucessprites_10: -1279813165
