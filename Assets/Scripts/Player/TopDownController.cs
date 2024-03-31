@@ -16,6 +16,11 @@ public class TopDownController : MonoBehaviour {
     [SerializeField] float dashSpeed = 6f;
     [SerializeField] float dashDuration = 0.2f;
     [SerializeField] float dashCooldown = 0.5f;
+
+    [Header("Audio Settings")]
+    [SerializeField] AudioClip dashSound;
+    [SerializeField] AudioClip[] footstepSounds;
+
     bool isDashing;
     bool canDash;
 
@@ -68,7 +73,11 @@ public class TopDownController : MonoBehaviour {
         canDash = false;
         animator.SetBool("isDashing", true);
         isDashing = true;
-        body.velocity = new Vector2(animator.GetFloat("XInput"),animator.GetFloat("YInput")) * dashSpeed;
+        body.velocity = new Vector2(animator.GetFloat("XInput"), animator.GetFloat("YInput")) * dashSpeed;
+
+        // Play Dash sound
+        GetComponent<AudioSource>().PlayOneShot(dashSound);
+
         yield return new WaitForSeconds(dashDuration);
         body.velocity = Vector2.zero;
         animator.SetBool("isDashing", false);
@@ -76,4 +85,5 @@ public class TopDownController : MonoBehaviour {
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
+
 }
