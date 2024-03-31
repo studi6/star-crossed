@@ -9649,6 +9649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3488482225052226256, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
+      propertyPath: m_lineSpacing
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3791994940331405072, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
       propertyPath: m_Enabled
       value: 0
