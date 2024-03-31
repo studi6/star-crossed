@@ -5,6 +5,9 @@ using UnityEngine;
 public abstract class WeaponAbstract : MonoBehaviour
 {
     public GameObject bullet;
+    public AudioSource audioSource;
+    public AudioClip gunShootSound;
+    public AudioClip gunReloadtSound;
     public int currentClipAmmo;
     public int maxClipAmmo;
     public int totalAmmo;
@@ -20,15 +23,21 @@ public abstract class WeaponAbstract : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButton(0) && canFire && (currentClipAmmo > 0)){
+            audioSource.Stop();
             Fire();
         }
         if (Input.GetKeyDown("r") && (currentClipAmmo < maxClipAmmo)){
-            StartCoroutine(ReloadWait());
+            Reload();
         }
+        if (currentClipAmmo==0){
+            Reload();
+        }
+           
     }  
 
     protected void Fire()
-    {
+    {  
+        audioSource.PlayOneShot(gunShootSound);
         GameObject projectile = Instantiate(bullet, transform.position, transform.rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletVelocity, ForceMode2D.Impulse);
         currentClipAmmo--;
@@ -39,6 +48,11 @@ public abstract class WeaponAbstract : MonoBehaviour
         canFire = false; 
         yield return new WaitForSeconds(fireRate);
         canFire = true;
+    }
+
+    private void Reload(){
+        StartCoroutine(ReloadWait());
+        audioSource.PlayOneShot(gunReloadtSound);
     }
 
     IEnumerator ReloadWait() {

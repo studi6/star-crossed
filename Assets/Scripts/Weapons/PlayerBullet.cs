@@ -8,7 +8,7 @@ public class PlayerBullet : BulletScript
     private float damage;
      void Start()
     {
-        damage = 10f; // placeholder value
+        damage = 0.015f; // placeholder value
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

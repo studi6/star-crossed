@@ -16,6 +16,7 @@ public class SystemManager : MonoBehaviour
     private int gameState = 0; //noncombat, combat, cutscene(disabled movement)
     [SerializeField] private AudioClip[] themes;
     [SerializeField] private GameObject combatUI;
+    [SerializeField] private GameObject kbAttack;
     public Slider bossHPBar;
     public GameObject player;
     private AudioSource gameMusic;
@@ -43,6 +44,8 @@ public class SystemManager : MonoBehaviour
         Debug.Log("GameState changed to: " + gameState);
         gameMusic.Stop();
         combatUI.SetActive(false);
+        kbAttack.SetActive(false);
+        player.transform.Find("WeaponHandler").gameObject.SetActive(false);
         // Example: Play a different theme based on gameState
         switch (gameState)
         {
@@ -52,7 +55,9 @@ public class SystemManager : MonoBehaviour
             case 1:
                 gameMusic.PlayOneShot(themes[1]);
                 gameMusic.volume = 0.5f;
+                player.transform.Find("WeaponHandler").gameObject.SetActive(true);
                 combatUI.SetActive(true);
+                kbAttack.SetActive(true);
                 break;
             case 2:
                 gameMusic.PlayOneShot(themes[2]);
