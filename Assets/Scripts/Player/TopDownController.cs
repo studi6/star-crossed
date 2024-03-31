@@ -18,6 +18,7 @@ public class TopDownController : MonoBehaviour
     [SerializeField] private float dashDuration = 0.2f;
     [SerializeField] private float dashCooldown = 0.5f;
     private bool canDash = true;
+    private bool isDashing = false;
 
     [Header("Audio Settings")]
     [SerializeField] private AudioClip dashSound;
@@ -43,50 +44,50 @@ public class TopDownController : MonoBehaviour
 
     private void Update()
     {
-        HandleDash();
         HandleMovement();
-    }
-
-    private void HandleDash()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
-        {
-            StartCoroutine(DashCoroutine());
-        }
     }
 
     private IEnumerator DashCoroutine()
     {
         canDash = false;
+        isDashing=true;
         animator.SetInteger("state", 2);
         body.velocity = new Vector2(animator.GetFloat("XInput"), animator.GetFloat("YInput")) * dashSpeed;
         audioSource.PlayOneShot(dashSound);
         yield return new WaitForSeconds(dashDuration);
         body.velocity = Vector2.zero;
+        isDashing=false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
 
     private void HandleMovement()
     {
-        if (moveInput != Vector2.zero)
+        if (!isDashing)
         {
-            targetSpeed = moveSpeed;
-            currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, Time.fixedDeltaTime);
-            Vector2 moveVector = moveInput * currentSpeed * Time.fixedDeltaTime;
-            body.MovePosition(body.position + moveVector);
-            if (!audioSource.isPlaying)
+        if (Input.GetKeyDown(KeyCode.Space)&&canDash)
             {
-                PlayRandomFootstepSound();
+                StartCoroutine(DashCoroutine());
             }
+        if (moveInput != Vector2.zero)
+            {
+                targetSpeed = moveSpeed;
+                currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, Time.fixedDeltaTime);
+                Vector2 moveVector = moveInput * currentSpeed * Time.fixedDeltaTime;
+                body.MovePosition(body.position + moveVector);
+                if (!audioSource.isPlaying)
+                {
+                    PlayRandomFootstepSound();
+                }
 
-            animator.SetInteger("state", 1);
-        }
-        else
-        {
-            targetSpeed = 0;
-            animator.SetInteger("state", 0);
-            audioSource.Stop();
+                animator.SetInteger("state", 1);
+            }
+            else
+            {
+                targetSpeed = 0;
+                animator.SetInteger("state", 0);
+                audioSource.Stop();
+            }
         }
     }
 
