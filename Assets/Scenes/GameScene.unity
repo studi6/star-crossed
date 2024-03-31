@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &2663973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4217750577927230338, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
+  m_PrefabInstance: {fileID: 2189647907297523436}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &413596624 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3488482225593166487, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
@@ -5477,7 +5482,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982a00d40bbfc2a49a90d4da16020bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  themes: []
+  themes:
+  - {fileID: 8300000, guid: 6da7658e86b7a604687ca73ecac946f3, type: 3}
+  - {fileID: 8300000, guid: 462411d1a5c2edf4e878c09358f70e0a, type: 3}
+  - {fileID: 8300000, guid: d352c88c18a4d8c4a83a8d370eee31ac, type: 3}
+  combatUI: {fileID: 2663973}
 --- !u!114 &1127391857 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3488482225052226256, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
