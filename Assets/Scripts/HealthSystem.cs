@@ -7,6 +7,7 @@ public class HealthSystem : MonoBehaviour
     protected float health;
     [SerializeField]
     protected const float MAXHEALTH = 100f;
+    [SerializeField] bool isBoss = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +20,14 @@ public class HealthSystem : MonoBehaviour
         {
             health -= damage; // damage amount depend on Bullet script
             Debug.Log("Entity Health: " + health); // console log check
+            if (isBoss){
+                SystemManager.instance.slider.UpdateHealth(health);
+            }
             if (health <= 0f) {
                 Debug.Log("Entity is dead"); // console log check
                 if (gameObject.CompareTag("Enemy")) {
+                    if (isBoss)
+                        SystemManager.instance.ChangeGameState(0);
                     Destroy(gameObject);
                 }
             }
