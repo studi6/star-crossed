@@ -13,6 +13,11 @@ public class SystemManager : MonoBehaviour
     #endregion
 
     public int gameState; //noncombat, combat, cutscene(disabled movement)
+    [SerializeField] private AudioClip rockBottomTheme;
+
+    private void Start(){
+        
+    }
 
     public void ChangeGameState(int state)
     {
