@@ -279,6 +279,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: brick_normal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7632326759981899454, guid: 783e37e86bf1041d6b6127584473c1c4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632326759981899454, guid: 783e37e86bf1041d6b6127584473c1c4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -346936805
+      objectReference: {fileID: 0}
     - target: {fileID: 9026626236149238843, guid: 783e37e86bf1041d6b6127584473c1c4, type: 3}
       propertyPath: m_RootOrder
       value: 2

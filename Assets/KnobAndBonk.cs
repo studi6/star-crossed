@@ -59,15 +59,15 @@ public class KnobAndBonk : MonoBehaviour
                     yield return null;
                 }
 
-                // Check if the player is within attack range
-                if (direction.magnitude <= 1.5f)
-                {
+                // // Check if the player is within attack range
+                // if (direction.magnitude <= 1.5f)
+                // {
                     isAttacking = true;
                     // Set attack state
                     anim.SetInteger("state", 1);
                     StartCoroutine(AttackPattern());
                     yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
-                }
+                // }
             }
             else
             {
