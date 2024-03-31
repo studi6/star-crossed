@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class SystemManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class SystemManager : MonoBehaviour
     private int gameState = 0; //noncombat, combat, cutscene(disabled movement)
     [SerializeField] private AudioClip[] themes;
     [SerializeField] private GameObject combatUI;
+    public Slider slider;
     private AudioSource gameMusic;
 
     private void Start()
