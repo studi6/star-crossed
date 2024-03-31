@@ -9659,9 +9659,17 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 937569758}
-    - target: {fileID: 7456722279947979545, guid: b01285f0a029e0d4aafc4bc6114527fe, type: 3}
-      propertyPath: m_Name
-      value: KnobAndBonk
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b01285f0a029e0d4aafc4bc6114527fe, type: 3}
+- target: {fileID: 7456722279947979539, guid: b01285f0a029e0d4aafc4bc6114527fe, type: 3}
+  propertyPath: moveSpeed
+  value: 1.5
+  objectReference: {fileID: 0}
+- target: {fileID: 7456722279947979539, guid: b01285f0a029e0d4aafc4bc6114527fe, type: 3}
+  propertyPath: basicLazer
+  value: 
+  objectReference: {fileID: 5561812613733749097, guid: 1d170f38f3a1c4121a511ecf97ed9d22, type: 3}
+- target: {fileID: 7456722279947979545, guid: b01285f0a029e0d4aafc4bc6114527fe, type: 3}
+  propertyPath: m_Name
+  value: KnobAndBonk
+  objectReference: {fileID: 0}
+m_RemovedComponents: []
+m_SourcePrefab: {fileID: 100100000, guid: b01285f0a029e0d4aafc4bc6114527fe, type: 3}
