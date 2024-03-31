@@ -25,6 +25,8 @@ public abstract class WeaponAbstract : MonoBehaviour
         if (Input.GetKeyDown("r") && (currentClipAmmo < maxClipAmmo)){
             StartCoroutine(ReloadWait());
         }
+        if (currentClipAmmo==0)
+            StartCoroutine(ReloadWait());
     }  
 
     protected void Fire()

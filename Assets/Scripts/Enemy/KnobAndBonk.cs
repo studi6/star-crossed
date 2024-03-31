@@ -14,8 +14,8 @@ public class KnobAndBonk : MonoBehaviour
 
     void Start()
     {
-        anim = GetComponent<Animator>();
-        sr = GetComponent<SpriteRenderer>();
+        anim = GetComponentInParent<Animator>();
+        sr = GetComponentInParent<SpriteRenderer>();
         StartCoroutine(AttackLoop());
     }
 
