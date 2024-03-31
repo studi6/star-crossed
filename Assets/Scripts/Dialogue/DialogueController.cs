@@ -40,7 +40,7 @@ public class DialogueController : MonoBehaviour
             else if (conversationEnded && !isTyping)
             {
                 //end convo
-                EndConversation();
+                EndConversation(dialogueText);
                 return;
             }
         }
@@ -60,7 +60,7 @@ public class DialogueController : MonoBehaviour
         }
 
         //update conversationEnded bool
-        if (paragraphs.Count == 0)
+        if (images.Count == 0)
         {
             conversationEnded = true;
         }
@@ -71,6 +71,7 @@ public class DialogueController : MonoBehaviour
         //activate gameObject
         if (!gameObject.activeSelf)
         {
+           SystemManager.instance.ChangeGameState(2);
             gameObject.SetActive(true);
         }
 
@@ -83,7 +84,7 @@ public class DialogueController : MonoBehaviour
         }
     }
 
-    private void EndConversation()
+    private void EndConversation(DialogueText dialogueText)
     {
         //clear queue
 
@@ -93,6 +94,10 @@ public class DialogueController : MonoBehaviour
         //deactivate gameObject
         if (gameObject.activeSelf)
         {
+            if (dialogueText.whenFinishBeginCombat)
+                SystemManager.instance.ChangeGameState(1);
+            else
+                SystemManager.instance.ChangeGameState(0);
             gameObject.SetActive(false);
         }
     }

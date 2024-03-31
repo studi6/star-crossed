@@ -61,7 +61,7 @@ public class TopDownController : MonoBehaviour
 
     private void Update()
     {
-        if (isDashing)
+        if (isDashing || (SystemManager.instance.GameState == 2))
             return;
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {

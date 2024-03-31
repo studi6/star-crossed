@@ -6,6 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName ="Dialogue/New Dialogue Container")]
 public class DialogueText : ScriptableObject
 {
+    public bool whenFinishBeginCombat;
     public string[] speakerNames;
 
     [TextArea(5,10)]
