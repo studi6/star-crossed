@@ -9,6 +9,8 @@ public class KnobAndBonk : MonoBehaviour
     public float moveSpeed = 2.5f;
     private bool isAttacking = false;
     private int attackStage = 0;
+    [SerializeField]
+    private GameObject basicLazer;
 
     void Start()
     {
@@ -25,10 +27,6 @@ public class KnobAndBonk : MonoBehaviour
 
             if (!isAttacking && direction.magnitude > 0.1f){
                 anim.SetInteger("state", 0); // Idle state
-            } else {
-                // maintains attack pattern
-                attackPattern();
-                attackStage += 1;
             }
         }
     }
@@ -67,6 +65,7 @@ public class KnobAndBonk : MonoBehaviour
                     isAttacking = true;
                     // Set attack state
                     anim.SetInteger("state", 1);
+                    StartCoroutine(AttackPattern());
                     yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
                 }
             }
@@ -77,40 +76,48 @@ public class KnobAndBonk : MonoBehaviour
         }
     }
 
-    private void attackPattern() {
+    private IEnumerator AttackPattern() {
         switch(attackStage % 12){
             case 3:
-                lazerBeam();
+                yield return StartCoroutine(LazerBeam());
                 break;
             case 7:
-                jumpAttack();
+                yield return StartCoroutine(JumpAttack());
                 break;
             case 11:
-                bulletCircle();
+                yield return StartCoroutine(BulletCircle());
                 break;
             default: 
-                basicAttack();
+                yield return StartCoroutine(BasicAttack());
                 break;
         }
+        isAttacking = false;
+        attackStage += 1;
     }
 
-    private void lazerBeam() {
+    private IEnumerator LazerBeam() {
         Debug.Log("attack 1"); // console log check
         // TODO
+        yield return null;
     }
 
-    private void jumpAttack() {
+    private IEnumerator JumpAttack() {
         Debug.Log("attack 2"); // console log check
         // TODO
+        yield return null;
     }
 
-    private void bulletCircle() {
+    private IEnumerator BulletCircle() {
         Debug.Log("attack 3"); // console log check
         // TODO
+        yield return null;
     }
 
-    private void basicAttack() {
+    private IEnumerator BasicAttack() {
         Debug.Log("basic attack"); // console log check
         // TODO
+        yield return new WaitForSeconds(1.5f);
+        GameObject projectile = Instantiate(basicLazer, transform.position, transform.rotation);
+        projectile.GetComponent<Rigidbody2D>().AddForce((target.position - projectile.transform.position).normalized * 10f, ForceMode2D.Impulse);
     }
 }
