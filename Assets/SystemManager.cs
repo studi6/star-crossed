@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class SystemManager : MonoBehaviour
 {
@@ -16,13 +16,15 @@ public class SystemManager : MonoBehaviour
     private int gameState = 0; //noncombat, combat, cutscene(disabled movement)
     [SerializeField] private AudioClip[] themes;
     [SerializeField] private GameObject combatUI;
-    public Slider slider;
+    public Slider bossHPBar;
+    public GameObject player;
     private AudioSource gameMusic;
 
     private void Start()
     {
-        gameMusic = GetComponent<AudioSource>(); // Assuming gameMusic AudioSource is attached to the same GameObject
-        gameMusic.PlayOneShot(themes[gameState]);
+        player = GameObject.FindWithTag("Player");
+        gameMusic = GetComponent<AudioSource>();
+        ChangeGameState(0);
     }
 
     public int GameState
@@ -66,5 +68,15 @@ public class SystemManager : MonoBehaviour
     public void ChangeGameState(int state)
     {
         GameState = state;
+    }
+
+    public void SetTotalHP(float health)
+    {
+        bossHPBar.maxValue = health;
+    }
+
+    public void AddHealth(float damage)
+    {
+        bossHPBar.value -= damage;
     }
 }

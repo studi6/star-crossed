@@ -21,7 +21,7 @@ public class HealthSystem : MonoBehaviour
             health -= damage; // damage amount depend on Bullet script
             Debug.Log("Entity Health: " + health); // console log check
             if (isBoss){
-                SystemManager.instance.slider.UpdateHealth(health);
+                SystemManager.instance.AddHealth(damage);
             }
             if (health <= 0f) {
                 Debug.Log("Entity is dead"); // console log check
