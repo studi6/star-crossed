@@ -6,24 +6,25 @@ using UnityEngine.InputSystem;
 public abstract class NPC : MonoBehaviour, IInteractable
 {
     [SerializeField] private SpriteRenderer _interactSprite;
-    private bool IsWithinInteractDistance;
+    private bool IsWithinInteractDistance = false;
 
     public abstract void Interact();
+
+    private void Update(){
+        if (IsWithinInteractDistance && Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            Debug.Log("interacted with npc");
+            Interact();     
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("within interact distance");
             _interactSprite.gameObject.SetActive(true);
             IsWithinInteractDistance=true;
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (IsWithinInteractDistance && Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            Interact();     
         }
     }
     
@@ -31,6 +32,7 @@ public abstract class NPC : MonoBehaviour, IInteractable
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("not within interact distance");
             _interactSprite.gameObject.SetActive(false);
             IsWithinInteractDistance=false;
         }

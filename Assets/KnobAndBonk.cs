@@ -24,7 +24,7 @@ public class KnobAndBonk : MonoBehaviour
             transform.position += direction * moveSpeed * Time.deltaTime;
 
             if (!isAttacking && direction.magnitude > 0.1f){
-                anim.SetInteger("state", 0); // Idle state
+                anim.SetInteger("state", 2); // Idle state
             } else {
                 // maintains attack pattern
                 attackPattern();
