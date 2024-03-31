@@ -65,7 +65,7 @@ public class TopDownController : MonoBehaviour
     {
         if (!isDashing)
         {
-        if (Input.GetKeyDown(KeyCode.Space)&&canDash)
+        if (Input.GetKey(KeyCode.Space)&&canDash)
             {
                 StartCoroutine(DashCoroutine());
             }
