@@ -14,7 +14,6 @@ public class EnemyBullet : BulletScript
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("hit the player");
             HealthSystem health = collision.gameObject.GetComponent<HealthSystem>();
             if (health != null) {
                 health.TakeDamage(damage); // call function in HealthSystem.cs
