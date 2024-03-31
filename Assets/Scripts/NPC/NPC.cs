@@ -35,6 +35,7 @@ public abstract class NPC : MonoBehaviour, IInteractable
             Debug.Log("not within interact distance");
             _interactSprite.gameObject.SetActive(false);
             IsWithinInteractDistance=false;
+            // EndConversation();
         }
     }
 }

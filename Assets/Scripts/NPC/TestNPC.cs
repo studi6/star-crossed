@@ -11,6 +11,10 @@ public class TestNPC : NPC, ITalkable
         Talk(dialogueText);
     }
 
+    // public void EndConversation(){
+    //     dialogueController.EndConversation();
+    // }
+
     public void Talk(DialogueText dialogueText)
     {
         //start conversation
