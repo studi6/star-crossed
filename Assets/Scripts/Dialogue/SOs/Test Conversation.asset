@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82818fbd5fd8f44ebef8b6cb61c5889, type: 3}
   m_Name: Test Conversation
   m_EditorClassIdentifier: 
+  whenFinishBeginCombat: 1
   speakerNames:
   - Deuce
   - Deuce

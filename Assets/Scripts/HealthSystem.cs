@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    private float health;
+    protected float health;
     [SerializeField]
-    private const float MAXHEALTH = 100f;
+    protected const float MAXHEALTH = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,5 +38,15 @@ public class HealthSystem : MonoBehaviour
         } else {
             Debug.Log("Entity at max health"); // console log check
         }
+    }
+
+    public float getMaxHealth()
+    {
+        return MAXHEALTH;
+    }
+
+    public float getHealth()
+    {
+        return health;
     }
 }
