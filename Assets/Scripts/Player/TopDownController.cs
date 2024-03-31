@@ -35,12 +35,14 @@ public class TopDownController : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
+        if (SystemManager.instance.GameState == 2){
+            return;
+        }
         moveInput = value.Get<Vector2>();
         if (moveInput != Vector2.zero)
         {
             animator.SetFloat("XInput", moveInput.x);
             animator.SetFloat("YInput", moveInput.y);
-            animator.SetInteger("state", 1);
         }
     }
 
@@ -61,7 +63,7 @@ public class TopDownController : MonoBehaviour
 
     private void Update()
     {
-        if (isDashing || (SystemManager.instance.GameState == 2))
+        if (isDashing || SystemManager.instance.GameState == 2)
             return;
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
@@ -70,6 +72,7 @@ public class TopDownController : MonoBehaviour
 
         if (moveInput != Vector2.zero)
         {
+            animator.SetInteger("state", 1);
             targetSpeed = moveSpeed;
             currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, Time.fixedDeltaTime);
             Vector2 moveVector = moveInput * currentSpeed * Time.fixedDeltaTime;
