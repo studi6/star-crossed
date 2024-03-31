@@ -11,7 +11,10 @@ public abstract class NPC : MonoBehaviour, IInteractable
     public abstract void Interact();
 
     private void Update(){
-        if (IsWithinInteractDistance && Keyboard.current.eKey.wasPressedThisFrame)
+        if (SystemManager.instance.GameState==1){
+            return;
+        }
+        if (IsWithinInteractDistance&& Keyboard.current.eKey.wasPressedThisFrame)
         {
             Debug.Log("interacted with npc");
             Interact();     
@@ -20,7 +23,7 @@ public abstract class NPC : MonoBehaviour, IInteractable
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && SystemManager.instance.GameState==0)
         {
             Debug.Log("within interact distance");
             _interactSprite.gameObject.SetActive(true);

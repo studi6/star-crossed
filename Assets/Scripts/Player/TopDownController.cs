@@ -63,8 +63,13 @@ public class TopDownController : MonoBehaviour
 
     private void Update()
     {
-        if (isDashing || SystemManager.instance.GameState == 2)
+        if (isDashing)
             return;
+        if (SystemManager.instance.GameState==2){
+            animator.SetInteger("state", 0);
+            return;
+        }
+            
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
             StartCoroutine(DashCoroutine());

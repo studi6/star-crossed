@@ -9,10 +9,13 @@ public class PlayerHealthDisplayHandler : MonoBehaviour
     private HealthSystem playerHealth;
     private int numHearts = 4;
 
-    void Start() 
+    void OnEnable()
     {
-        playerHealth = this.transform.parent.parent.gameObject.GetComponent<HealthSystem>();
-        drawHearts();
+        if (SystemManager.instance != null && SystemManager.instance.player != null)
+        {
+            playerHealth = SystemManager.instance.player.GetComponent<HealthSystem>();
+            drawHearts();
+        }
     }
 
     void Update()
