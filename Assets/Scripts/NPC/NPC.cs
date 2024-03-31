@@ -11,7 +11,10 @@ public abstract class NPC : MonoBehaviour, IInteractable
     public abstract void Interact();
 
     private void Update(){
-        if (IsWithinInteractDistance&& SystemManager.instance.GameState==0 && Keyboard.current.eKey.wasPressedThisFrame)
+        if (SystemManager.instance.GameState==1){
+            return;
+        }
+        if (IsWithinInteractDistance&& Keyboard.current.eKey.wasPressedThisFrame)
         {
             Debug.Log("interacted with npc");
             Interact();     
