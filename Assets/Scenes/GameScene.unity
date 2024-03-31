@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &413596624 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3488482225593166487, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
+  m_PrefabInstance: {fileID: 2189647907297523436}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &419211025
 GameObject:
   m_ObjectHideFlags: 0
@@ -5355,6 +5366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
+  rockBottomTheme: {fileID: 0}
 --- !u!4 &1060003159
 Transform:
   m_ObjectHideFlags: 0
@@ -5370,6 +5382,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1127391857 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3488482225052226256, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
+  m_PrefabInstance: {fileID: 2189647907297523436}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2074292989
 GameObject:
   m_ObjectHideFlags: 0
@@ -9261,6 +9284,17 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &2143585824 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3488482223868966849, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
+  m_PrefabInstance: {fileID: 2189647907297523436}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2189647907297523436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9318,7 +9352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3488482223868966849, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
       propertyPath: m_text
-      value: Knob and Bonk
+      value: Deuce
       objectReference: {fileID: 0}
     - target: {fileID: 3488482223868966849, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
       propertyPath: m_fontSize
@@ -9372,6 +9406,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -6.8
       objectReference: {fileID: 0}
+    - target: {fileID: 3488482224426723139, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
+      propertyPath: NPCNameText
+      value: 
+      objectReference: {fileID: 2143585824}
+    - target: {fileID: 3488482224426723139, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
+      propertyPath: NPCDialogueText
+      value: 
+      objectReference: {fileID: 1127391857}
+    - target: {fileID: 3488482224426723139, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
+      propertyPath: NPCPortraitImage
+      value: 
+      objectReference: {fileID: 413596624}
     - target: {fileID: 3488482224426723149, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
       propertyPath: m_Color.a
       value: 0.8509804
@@ -9479,6 +9525,10 @@ PrefabInstance:
     - target: {fileID: 3488482224886588183, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488482225052226256, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
+      propertyPath: m_text
+      value: '[walks over to the brain halves]'
       objectReference: {fileID: 0}
     - target: {fileID: 3488482225052226256, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
       propertyPath: m_fontSize
