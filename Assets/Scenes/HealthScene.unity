@@ -237,6 +237,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 5298534229087720237, guid: 60eec33e5918257458c5389416a7364b, type: 3}
+  audioSource: {fileID: 0}
+  gunShootSound: {fileID: 0}
+  gunReloadtSound: {fileID: 0}
   currentClipAmmo: 0
   maxClipAmmo: 0
   totalAmmo: 0
@@ -357,6 +360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8446335166199585448, guid: 7167ccefaf6224e85adc4bdf4337d5f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7167ccefaf6224e85adc4bdf4337d5f1, type: 3}
 --- !u!4 &309279803 stripped
@@ -410,6 +417,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 5298534229087720237, guid: 60eec33e5918257458c5389416a7364b, type: 3}
+  audioSource: {fileID: 0}
+  gunShootSound: {fileID: 0}
+  gunReloadtSound: {fileID: 0}
   currentClipAmmo: 0
   maxClipAmmo: 0
   totalAmmo: 0
@@ -468,7 +478,7 @@ SpriteRenderer:
   m_Size: {x: 6, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &717153042
@@ -640,18 +650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51579b117c357694a87b8509a1c8ae47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
---- !u!114 &1611093702 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2368821055289495268, guid: 7167ccefaf6224e85adc4bdf4337d5f1, type: 3}
-  m_PrefabInstance: {fileID: 309279802}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611093696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98a6bf2eeaf2b4f6b9c409d0b360bed8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1659927010
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a6bf2eeaf2b4f6b9c409d0b360bed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBoss: 0
 --- !u!212 &1659927015
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -918,7 +917,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartPrefab: {fileID: 209539586036746956, guid: 91b6f3f8e23493644b138a8e36822533, type: 3}
-  playerHealth: {fileID: 1611093702}
 --- !u!1 &2139061602
 GameObject:
   m_ObjectHideFlags: 0
