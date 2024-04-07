@@ -13,7 +13,7 @@ public class SystemManager : MonoBehaviour
     }
     #endregion
 
-    private int gameState = 0; //noncombat, combat, cutscene(disabled movement)
+    public int gameState = 0; //noncombat, combat, cutscene(disabled movement)
     [SerializeField] private AudioClip[] themes;
     [SerializeField] private GameObject combatUI;
     [SerializeField] private GameObject kbAttack;

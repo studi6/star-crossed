@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82818fbd5fd8f44ebef8b6cb61c5889, type: 3}
   m_Name: K&B_After_Battle
   m_EditorClassIdentifier: 
-  speakerNames: []
-  paragraphs: []
-  portraitImages: []
+  whenFinishBeginCombat: 1
+  speakerNames:
+  - meow
+  paragraphs:
+  - hi
+  portraitImages:
+  - {fileID: 21300000, guid: 61e879ebc13e06046a0323836e9e470e, type: 3}

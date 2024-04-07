@@ -11,11 +11,11 @@ public class PlayerHealthDisplayHandler : MonoBehaviour
 
     void OnEnable()
     {
-        if (SystemManager.instance != null && SystemManager.instance.player != null)
-        {
+        //if (SystemManager.instance != null && SystemManager.instance.player != null)
+        //{
             playerHealth = SystemManager.instance.player.GetComponent<HealthSystem>();
             drawHearts();
-        }
+        //}
     }
 
     void Update()
