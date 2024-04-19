@@ -81,7 +81,7 @@ public class TopDownController : MonoBehaviour
         {
             animator.SetInteger("state", 1);
             targetSpeed = moveSpeed;
-            currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, Time.fixedDeltaTime);
+            currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, Time.fixedDeltaTime * (targetSpeed - currentSpeed));
             Vector2 moveVector = moveInput * currentSpeed * Time.fixedDeltaTime;
             body.MovePosition(body.position + moveVector);
             if (!audioSource.isPlaying)
