@@ -26,7 +26,9 @@ public class CameraShake : MonoBehaviour
             float x = Random.Range(-1f, 1f) * magnitude;
             float y = Random.Range(-1f, 1f) * magnitude;
 
-            cameraObject.transform.localPosition = new UnityEngine.Vector3(x, y, originalPos.z);
+            // Smoothly interpolate between the current position and the target position
+            UnityEngine.Vector3 targetPos = originalPos + new UnityEngine.Vector3(x, y, 0f);
+            cameraObject.transform.localPosition = UnityEngine.Vector3.Lerp(cameraObject.transform.localPosition, targetPos, Time.deltaTime * 10f);
 
             elapsed += Time.deltaTime;
 
