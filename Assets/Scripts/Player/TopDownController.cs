@@ -35,7 +35,8 @@ public class TopDownController : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
-        if (SystemManager.instance.GameState == 2){
+        if (SystemManager.instance.GameState == 2)
+        {
             return;
         }
         moveInput = value.Get<Vector2>();
@@ -65,21 +66,22 @@ public class TopDownController : MonoBehaviour
     {
         if (isDashing)
             return;
-        if (SystemManager.instance.GameState==2){
+        if (SystemManager.instance.GameState == 2)
+        {
             animator.SetInteger("state", 0);
             return;
         }
-            
+
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
             StartCoroutine(DashCoroutine());
         }
-
+        // Movement logic
         if (moveInput != Vector2.zero)
         {
             animator.SetInteger("state", 1);
             targetSpeed = moveSpeed;
-            currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, Time.fixedDeltaTime);
+            currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, Time.fixedDeltaTime * (targetSpeed - currentSpeed));
             Vector2 moveVector = moveInput * currentSpeed * Time.fixedDeltaTime;
             body.MovePosition(body.position + moveVector);
             if (!audioSource.isPlaying)
@@ -89,7 +91,7 @@ public class TopDownController : MonoBehaviour
         }
         else
         {
-            targetSpeed=0;
+            targetSpeed = 0;
             animator.SetInteger("state", 0);
             audioSource.Stop();
         }
