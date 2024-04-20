@@ -22,6 +22,7 @@ public class HealthSystem : MonoBehaviour
             Debug.Log("Entity Health: " + health); // console log check
             if (isBoss){
                 SystemManager.instance.AddHealth(damage);
+                SystemManager.instance.DoCameraShake(0.09f, 0.09f);
             }
             if (health <= 0f) {
                 Debug.Log("Entity is dead"); // console log check
