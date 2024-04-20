@@ -10105,6 +10105,10 @@ PrefabInstance:
       propertyPath: gunReloadtSound
       value: 
       objectReference: {fileID: 8300000, guid: 5f518cd5b95d8474991150cf612da2ed, type: 3}
+    - target: {fileID: 1140203946, guid: 32b7d3403ecbd3d49ae086a2ca7b5b44, type: 3}
+      propertyPath: gunReloadtSoundVolume
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 1605907850, guid: 32b7d3403ecbd3d49ae086a2ca7b5b44, type: 3}
       propertyPath: audioSource
       value: 
