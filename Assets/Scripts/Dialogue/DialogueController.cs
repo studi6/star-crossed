@@ -9,6 +9,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI NPCNameText;
     [SerializeField] private TextMeshProUGUI NPCDialogueText;
     [SerializeField] private Image NPCPortraitImage;
+    [SerializeField] private GameObject skipButton;
     [SerializeField] private float typeSpeed = 10;
 
     private Queue<string> paragraphs = new Queue<string>();
@@ -16,7 +17,7 @@ public class DialogueController : MonoBehaviour
     private Queue<Sprite> images = new Queue<Sprite>();
 
     private bool conversationEnded;
-    
+
     private string p;
     private string n;
     private Sprite i;
@@ -30,8 +31,8 @@ public class DialogueController : MonoBehaviour
     public void DisplayNextParagraph(DialogueText dialogueText)
     {
         //if nothing in queue
-        if (paragraphs.Count == 0) 
-        { 
+        if (paragraphs.Count == 0)
+        {
             if (!conversationEnded)
             {
                 //start convo
@@ -46,14 +47,14 @@ public class DialogueController : MonoBehaviour
         }
 
         //if something in queue
-        if (!isTyping )
+        if (!isTyping)
         {
             p = paragraphs.Dequeue();
             n = names.Dequeue();
             i = images.Dequeue();
 
-            typeDialogueCoroutine = StartCoroutine(TypeDialogueText(p,n,i));
-        } 
+            typeDialogueCoroutine = StartCoroutine(TypeDialogueText(p, n, i));
+        }
         else
         {
             FinishParagraphEarly();
@@ -71,7 +72,7 @@ public class DialogueController : MonoBehaviour
         //activate gameObject
         if (!gameObject.activeSelf)
         {
-           SystemManager.instance.ChangeGameState(2);
+            SystemManager.instance.ChangeGameState(2);
             gameObject.SetActive(true);
         }
 
