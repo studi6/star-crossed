@@ -84,4 +84,18 @@ public class SystemManager : MonoBehaviour
     {
         bossHPBar.value -= damage;
     }
+
+    public void DoCameraShake(float duration, float magnitude)
+    {
+        StartCoroutine(CameraShake.instance.Shake(Camera.main, duration, magnitude));
+    }
+
+    // Test Camera Shake
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            DoCameraShake(0.5f, 0.5f);
+        }
+    }
 }
