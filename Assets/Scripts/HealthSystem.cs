@@ -26,6 +26,8 @@ public class HealthSystem : MonoBehaviour
                 SystemManager.instance.AddHealth(damage);
                 // Camera shake effect when boss is hit
                 SystemManager.instance.DoCameraShake(0.09f, 0.09f);
+                // Health bar shake effect when boss is hit
+                SystemManager.instance.DoHealthBarShake(0.1f, 0.06f);
             }
             if (health <= 0f)
             {
