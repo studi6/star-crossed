@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class SystemManager : MonoBehaviour
 {
     #region Singleton
-    public static SystemManager instance;
+    public static SystemManager instance { get; private set; };
 
     private void Awake()
     {
