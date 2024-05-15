@@ -8,7 +8,9 @@ public class SystemManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
+        if (instance != null && instance != this)
+            Destroy(this);
+        else
             instance = this;
     }
     #endregion

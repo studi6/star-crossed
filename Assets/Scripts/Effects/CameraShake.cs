@@ -10,7 +10,9 @@ public class CameraShake : MonoBehaviour
     public static CameraShake instance { get; private set; }
     private void Awake()
     {
-        if (instance == null)
+        if (instance != null && instance != this)
+            Destroy(this);
+        else
             instance = this;
     }
     #endregion

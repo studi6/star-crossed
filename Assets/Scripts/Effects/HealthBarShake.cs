@@ -11,15 +11,10 @@ public class HealthBarShake : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        }
+        if (instance != null && instance != this)
+            Destroy(this);
         else
-        {
             instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
     }
     #endregion
 
