@@ -5607,7 +5607,6 @@ GameObject:
   - component: {fileID: 1060003159}
   - component: {fileID: 1060003160}
   - component: {fileID: 1060003161}
-  - component: {fileID: 1060003162}
   m_Layer: 0
   m_Name: SystemManager
   m_TagString: Untagged
@@ -5748,18 +5747,6 @@ MonoBehaviour:
   bossHPBar: {fileID: 1477746705}
   bossHPBarObj: {fileID: 9491230}
   player: {fileID: 857781973}
---- !u!114 &1060003162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060003157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb1f40ce37eb93849a2545f6c42b0b5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1133507222
 GameObject:
   m_ObjectHideFlags: 0
