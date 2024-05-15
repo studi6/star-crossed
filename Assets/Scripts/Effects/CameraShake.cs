@@ -7,7 +7,7 @@ public class CameraShake : MonoBehaviour
 {
     // Make it singleton
     #region Singleton
-    public static CameraShake instance { get; private set; };
+    public static CameraShake instance { get; private set; }
     private void Awake()
     {
         if (instance == null)
