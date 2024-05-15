@@ -7,7 +7,7 @@ public class HealthBarShake : MonoBehaviour
 {
     // Make it a singleton
     #region Singleton
-    public static HealthBarShake instance { get; private set; };
+    public static HealthBarShake instance { get; private set; }
 
     private void Awake()
     {
