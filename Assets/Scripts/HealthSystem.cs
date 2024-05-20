@@ -58,9 +58,4 @@ public class HealthSystem : MonoBehaviour
             Debug.Log("Entity at max health"); // console log check
         }
     }
-
-    public float getMaxHealth()
-    {
-        return MAXHEALTH;
-    }
 }
