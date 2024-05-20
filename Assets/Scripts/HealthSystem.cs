@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    protected float health;
+    public float health { get; private set; }
     [SerializeField]
     protected const float MAXHEALTH = 100f;
     [SerializeField] bool isBoss = false;
@@ -60,10 +60,5 @@ public class HealthSystem : MonoBehaviour
     public float getMaxHealth()
     {
         return MAXHEALTH;
-    }
-
-    public float getHealth()
-    {
-        return health;
     }
 }

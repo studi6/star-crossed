@@ -40,12 +40,12 @@ public class PlayerHealthDisplayHandler : MonoBehaviour
     public void updateHearts()
     {
         // fixes having no hearts when 0 < health < 20
-        if ((playerHealth.getHealth() < 20) && (playerHealth.getHealth() > 0))
+        if ((playerHealth.health() < 20) && (playerHealth.health() > 0))
         {
             hearts[1].setHeartImage((HeartStatus)2);
             for (int i = 1; i < hearts.Count; i++)
             {
-                int playerHealthEights = (int)((playerHealth.getHealth() / 100) * (numHearts * 2));
+                int playerHealthEights = (int)((playerHealth.health() / 100) * (numHearts * 2));
                 int heartStatusRemainder = (int)Mathf.Clamp(playerHealthEights - (i * 2), 0, 2);
                 hearts[i].setHeartImage((HeartStatus)heartStatusRemainder);
             }
@@ -55,7 +55,7 @@ public class PlayerHealthDisplayHandler : MonoBehaviour
         // draw hearts based on health
         for (int i = 0; i < hearts.Count; i++)
         {
-            int playerHealthEights = (int)((playerHealth.getHealth() / 100) * (numHearts * 2));
+            int playerHealthEights = (int)((playerHealth.health() / 100) * (numHearts * 2));
             int heartStatusRemainder = (int)Mathf.Clamp(playerHealthEights - (i * 2), 0, 2);
             hearts[i].setHeartImage((HeartStatus)heartStatusRemainder);
         }
