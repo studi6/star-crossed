@@ -6,7 +6,7 @@ public class HealthSystem : MonoBehaviour
 {
     public float fHealth { get; private set; }
     [SerializeField]
-    protected const float MAXHEALTH = 100f;
+    public const float MAXHEALTH = 100f;
     [SerializeField] bool isBoss = false;
     // Start is called before the first frame update
     
