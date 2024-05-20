@@ -13,7 +13,6 @@ public class PlayerHealthDisplayHandler : MonoBehaviour
     {
         //if (SystemManager.instance != null && SystemManager.instance.player != null)
         //{
-            playerHealth = SystemManager.instance.player.GetComponent<HealthSystem>();
             drawHearts();
         //}
     }
