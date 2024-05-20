@@ -6,7 +6,7 @@ public class PlayerHealthDisplayHandler : MonoBehaviour
 {
     public GameObject heartPrefab;
     List<HeartDisplay> hearts = new List<HeartDisplay>();
-    private HealthSystem playerHealth;
+    [SerializeField] private HealthSystem playerHealth;
     private int numHearts = 4;
 
     void OnEnable()

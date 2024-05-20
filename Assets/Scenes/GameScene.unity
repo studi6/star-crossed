@@ -321,7 +321,6 @@ GameObject:
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
   - component: {fileID: 519420035}
-  - component: {fileID: 519420036}
   - component: {fileID: 519420037}
   m_Layer: 0
   m_Name: Main Camera
@@ -462,18 +461,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 937569758}
---- !u!114 &519420036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b027f4ada42611349aa4f1f8bb8f2806, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &519420037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,6 +764,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &937569773 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4865362035448010979, guid: 32b7d3403ecbd3d49ae086a2ca7b5b44, type: 3}
+  m_PrefabInstance: {fileID: 7159178375834236513}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857781973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a6bf2eeaf2b4f6b9c409d0b360bed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &960340270 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 804529418, guid: 32b7d3403ecbd3d49ae086a2ca7b5b44, type: 3}
@@ -10003,6 +10001,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 40.36
       objectReference: {fileID: 0}
+    - target: {fileID: 4044102610416750937, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 937569773}
     - target: {fileID: 4217750577927230338, guid: 3f3c0ccc9c162594ca42316fe42ed7e4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -10201,6 +10203,10 @@ PrefabInstance:
       propertyPath: gunReloadtSound
       value: 
       objectReference: {fileID: 8300000, guid: 56750a423337ad24ea43eadc49043a49, type: 3}
+    - target: {fileID: 848253100210089680, guid: 32b7d3403ecbd3d49ae086a2ca7b5b44, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 937569773}
     - target: {fileID: 1616207154531044515, guid: 32b7d3403ecbd3d49ae086a2ca7b5b44, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -10248,6 +10254,10 @@ PrefabInstance:
     - target: {fileID: 1616207154531044527, guid: 32b7d3403ecbd3d49ae086a2ca7b5b44, type: 3}
       propertyPath: m_Name
       value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334635453213612123, guid: 32b7d3403ecbd3d49ae086a2ca7b5b44, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7159178375772446984, guid: 32b7d3403ecbd3d49ae086a2ca7b5b44, type: 3}
       propertyPath: dashSound
