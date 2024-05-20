@@ -9,8 +9,10 @@ public class HealthSystem : MonoBehaviour
     protected const float MAXHEALTH = 100f;
     [SerializeField] bool isBoss = false;
     // Start is called before the first frame update
+    
     void Start()
     {
+        // Set localPlayer's health to max health
         health = MAXHEALTH;
     }
 
