@@ -8,6 +8,7 @@ public abstract class WeaponAbstract : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip gunShootSound;
     public AudioClip gunReloadtSound;
+    public float gunReloadtSoundVolume = 0.15F; // Volume Control for the reload sound (my ears are bleeding bro help)
     public int currentClipAmmo;
     public int maxClipAmmo;
     public int totalAmmo;
@@ -18,44 +19,50 @@ public abstract class WeaponAbstract : MonoBehaviour
     public float shotVisibility;
     public bool active;
 
-    private bool canFire = true;  
+    private bool canFire = true;
 
     void Update()
     {
-        if (Input.GetMouseButton(0) && canFire && (currentClipAmmo > 0)){
+        if (Input.GetMouseButton(0) && canFire && (currentClipAmmo > 0))
+        {
             audioSource.Stop();
             Fire();
         }
-        if (Input.GetKeyDown("r") && (currentClipAmmo < maxClipAmmo)){
+        if (Input.GetKeyDown("r") && (currentClipAmmo < maxClipAmmo))
+        {
             Reload();
         }
-        if (currentClipAmmo==0){
+        if (currentClipAmmo == 0)
+        {
             Reload();
         }
-           
-    }  
+
+    }
 
     protected void Fire()
-    {  
+    {
         audioSource.PlayOneShot(gunShootSound);
         GameObject projectile = Instantiate(bullet, transform.position, transform.rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletVelocity, ForceMode2D.Impulse);
         currentClipAmmo--;
-        StartCoroutine(FireRateCooldown()); 
+        StartCoroutine(FireRateCooldown());
     }
 
-    IEnumerator FireRateCooldown(){
-        canFire = false; 
+    IEnumerator FireRateCooldown()
+    {
+        canFire = false;
         yield return new WaitForSeconds(fireRate);
         canFire = true;
     }
 
-    private void Reload(){
+    private void Reload()
+    {
         StartCoroutine(ReloadWait());
-        audioSource.PlayOneShot(gunReloadtSound);
+        audioSource.PlayOneShot(gunReloadtSound, gunReloadtSoundVolume);
     }
 
-    IEnumerator ReloadWait() {
+    IEnumerator ReloadWait()
+    {
         yield return new WaitForSeconds(reloadTime);
         totalAmmo = totalAmmo - (maxClipAmmo - currentClipAmmo);
         currentClipAmmo = maxClipAmmo;
