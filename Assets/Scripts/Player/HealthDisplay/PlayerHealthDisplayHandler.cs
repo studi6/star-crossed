@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,11 +10,19 @@ public class PlayerHealthDisplayHandler : MonoBehaviour
     [SerializeField] private HealthSystem playerHealth;
     private int numHearts = 4;
 
+    // Caching vars
+    private int iPlayerHealth;
+    
+    private void Awake()
+    {
+        // Caching
+        iPlayerHealth = (int)playerHealth.fHealth;
+    }
+
     void OnEnable()
     {
         //if (SystemManager.instance != null && SystemManager.instance.player != null)
         //{
-            // playerHealth = SystemManager.instance.player.GetComponent<HealthSystem>();
             drawHearts();
         //}
     }
@@ -39,12 +48,12 @@ public class PlayerHealthDisplayHandler : MonoBehaviour
     public void updateHearts()
     {
         // fixes having no hearts when 0 < health < 20
-        if ((playerHealth.getHealth() < 20) && (playerHealth.getHealth() > 0))
+        if ((iPlayerHealth < 20) && (iPlayerHealth > 0))
         {
             hearts[1].setHeartImage((HeartStatus)2);
             for (int i = 1; i < hearts.Count; i++)
             {
-                int playerHealthEights = (int)((playerHealth.getHealth() / 100) * (numHearts * 2));
+                int playerHealthEights = (iPlayerHealth / 100) * (numHearts * 2);
                 int heartStatusRemainder = (int)Mathf.Clamp(playerHealthEights - (i * 2), 0, 2);
                 hearts[i].setHeartImage((HeartStatus)heartStatusRemainder);
             }
@@ -54,7 +63,7 @@ public class PlayerHealthDisplayHandler : MonoBehaviour
         // draw hearts based on health
         for (int i = 0; i < hearts.Count; i++)
         {
-            int playerHealthEights = (int)((playerHealth.getHealth() / 100) * (numHearts * 2));
+            int playerHealthEights = (iPlayerHealth / 100) * (numHearts * 2);
             int heartStatusRemainder = (int)Mathf.Clamp(playerHealthEights - (i * 2), 0, 2);
             hearts[i].setHeartImage((HeartStatus)heartStatusRemainder);
         }
