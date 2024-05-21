@@ -10268,6 +10268,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5298534229087720237, guid: 60eec33e5918257458c5389416a7364b, type: 3}
     - target: {fileID: 804529420, guid: 32b7d3403ecbd3d49ae086a2ca7b5b44, type: 3}
+      propertyPath: cur_weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: afc2ddb2bb4032641ae9748b10d4e738, type: 2}
+    - target: {fileID: 804529420, guid: 32b7d3403ecbd3d49ae086a2ca7b5b44, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 0}
