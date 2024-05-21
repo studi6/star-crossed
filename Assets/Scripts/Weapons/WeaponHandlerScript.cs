@@ -53,7 +53,7 @@ public class WeaponHandlerScript : MonoBehaviour
         }
     }
 
-    protected void Fire()
+    private void Fire()
     {
         audioSource.PlayOneShot(cur_weapon.gunShootSound);
         GameObject projectile = Instantiate(bullet, transform.position, transform.rotation);
