@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1943ae5df7a354da70e7c65bad5f5c, type: 3}
+  m_Name: Handgun
+  m_EditorClassIdentifier: 
+  name: New Weapon
+  icon: {fileID: 0}
+  bullet: {fileID: 0}
+  audioSource: {fileID: 0}
+  gunShootSound: {fileID: 0}
+  gunReloadtSound: {fileID: 0}
+  gunReloadtSoundVolume: 0.15
+  currentClipAmmo: 0
+  maxClipAmmo: 0
+  totalAmmo: 0
+  bulletVelocity: 0
+  reloadTime: 0
+  fireRate: 0
+  recoil: 0
+  shotVisibility: 0

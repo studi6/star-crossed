@@ -78,12 +78,12 @@ public class SystemManager : MonoBehaviour
         GameState = state;
     }
 
-    public void SetTotalHP(float health)
+    public void SetBossHealthBar(float health)
     {
         bossHPBar.maxValue = health;
     }
 
-    public void AddHealth(float damage)
+    public void DamageBossHealthBar(float damage)
     {
         bossHPBar.value -= damage;
     }
