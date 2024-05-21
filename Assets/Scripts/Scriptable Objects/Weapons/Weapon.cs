@@ -6,10 +6,10 @@ public class Weapon : ScriptableObject
 {
     new public string name = "New Weapon";
     public Sprite sprite = null;
-    public GameObject bullet;
+    public Sprite bulletSprite = null;
     public AudioClip gunShootSound;
-    public AudioClip gunReloadtSound;
-    public float gunReloadtSoundVolume = 0.15F; // Volume Control for the reload sound (my ears are bleeding bro help)
+    public AudioClip gunReloadSound;
+    public float gunReloadSoundVolume = 0.15F; // Volume Control for the reload sound (my ears are bleeding bro help)
     public int maxClipAmmo;
     public int totalAmmo;
     public float bulletVelocity;

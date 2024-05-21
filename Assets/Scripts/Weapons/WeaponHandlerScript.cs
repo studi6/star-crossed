@@ -5,12 +5,18 @@ using UnityEngine;
 public class WeaponHandlerScript : MonoBehaviour
 {
     private Transform m_transform;
-    private SpriteRenderer childSprite;
-    public GameObject gun1;
-    public GameObject gun2;
-    public GameObject melee;
+    private SpriteRenderer sr;
+    private Sprite sprite;
+    [SerializeField] private Weapon gun1;
+    [SerializeField] private Weapon gun2;
+    private Weapon melee;
+    private Weapon cur_weapon;
+
     public GameObject item;
-    public GameObject cur_weapon;
+    public GameObject bullet;
+    public AudioSource audioSource;
+    public bool isActive;
+    private bool canFire = true;
 
     // checks the angle of the mouse, then rotates object
     private void rotateWeapon()
@@ -21,16 +27,11 @@ public class WeaponHandlerScript : MonoBehaviour
         m_transform.rotation = rotation;
     }
 
-    private void setCurWeapon(GameObject wep)
+    private void setCurWeapon(Weapon wep)
     {
         cur_weapon = wep;
         m_transform = cur_weapon.transform;
-        foreach (Transform child in this.transform)
-        {
-            child.gameObject.SetActive(false);
-        }
-        cur_weapon.gameObject.SetActive(true);
-        childSprite = cur_weapon.gameObject.GetComponent<SpriteRenderer>();
+        sprite = cur_weapon.sprite;
     }
 
     private void swapWeapon()
@@ -48,8 +49,6 @@ public class WeaponHandlerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gun1 = this.transform.GetChild(0).gameObject;
-        gun2 = this.transform.GetChild(1).gameObject;
         setCurWeapon(gun1);
     }
 
