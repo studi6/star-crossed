@@ -18,11 +18,12 @@ MonoBehaviour:
   gunShootSound: {fileID: 8300000, guid: f7f1d9a533a79ec4990d2759ead47d35, type: 3}
   gunReloadSound: {fileID: 8300000, guid: 56750a423337ad24ea43eadc49043a49, type: 3}
   gunReloadSoundVolume: 0.15
+  damage: 0
   maxClipAmmo: 5
-  totalAmmo: 50
+  totalAmmo: 33
   currentClipAmmo: 5
   bulletVelocity: 50
   reloadTime: 2
-  fireRate: 0
+  fireRate: 0.4
   recoil: 0
   shotVisibility: 0

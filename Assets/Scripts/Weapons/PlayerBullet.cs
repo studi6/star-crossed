@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerBullet : BulletScript
 {
-    [SerializeField]
-    private float damage;
+    public float damage;
      void Start()
     {
         damage = 0.015f; // placeholder value

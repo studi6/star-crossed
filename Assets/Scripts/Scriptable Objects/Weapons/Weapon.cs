@@ -10,6 +10,7 @@ public class Weapon : ScriptableObject
     public AudioClip gunShootSound;
     public AudioClip gunReloadSound;
     public float gunReloadSoundVolume = 0.15F; // Volume Control for the reload sound (my ears are bleeding bro help)
+    public float damage;
     public int maxClipAmmo;
     public int totalAmmo;
     public int currentClipAmmo;
