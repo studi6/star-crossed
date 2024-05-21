@@ -59,7 +59,9 @@ public class WeaponHandlerScript : MonoBehaviour
         audioSource.PlayOneShot(cur_weapon.gunShootSound);
         GameObject projectile = Instantiate(bullet, transform.position, transform.rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(transform.right * cur_weapon.bulletVelocity, ForceMode2D.Impulse);
-        projectile.GetComponent<PlayerBullet>().damage = cur_weapon.damage;
+        BulletScript bulletScript = projectile.GetComponent<BulletScript>();
+        bulletScript.damage = cur_weapon.damage;
+        bulletScript.tag = "Player";
         currentClipAmmo--;
         StartCoroutine(FireRateCooldown());
     }

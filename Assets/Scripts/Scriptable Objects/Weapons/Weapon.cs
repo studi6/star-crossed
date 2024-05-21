@@ -13,10 +13,16 @@ public class Weapon : ScriptableObject
     public float damage;
     public int maxClipAmmo;
     public int totalAmmo;
+    [SerializeField] private int maxAmmo;
     public int currentClipAmmo;
     public float bulletVelocity;
     public float reloadTime;
     public float fireRate;
     public float recoil;
     public float shotVisibility;
+
+    private void Awake(){
+        totalAmmo = maxAmmo;
+        currentClipAmmo = maxClipAmmo;
+    }
 }

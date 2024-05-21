@@ -20,8 +20,8 @@ public class SystemManager : MonoBehaviour
     [SerializeField] private GameObject combatUI;
     [SerializeField] private GameObject kbAttack;
     public Slider bossHPBar;
-    public GameObject bossHPBarObj;
     public GameObject player;
+    private GameObject interactingNPC;
     private AudioSource gameMusic;
 
     private void Start()
@@ -44,7 +44,6 @@ public class SystemManager : MonoBehaviour
     private void HandleGameStateChange()
     {
         // Perform actions based on the gameState change
-        Debug.Log("GameState changed to: " + gameState);
         gameMusic.Stop();
         combatUI.SetActive(false);
         kbAttack.SetActive(false);
@@ -58,14 +57,10 @@ public class SystemManager : MonoBehaviour
             case 1:
                 gameMusic.PlayOneShot(themes[1]);
                 gameMusic.volume = 0.5f;
-                player.transform.Find("WeaponHandler").gameObject.SetActive(true);
-                combatUI.SetActive(true);
-                kbAttack.SetActive(true);
                 break;
             case 2:
                 gameMusic.PlayOneShot(themes[2]);
                 gameMusic.volume = 0.5f;
-
                 break;
             default:
                 gameMusic.PlayOneShot(themes[1]);
@@ -73,14 +68,29 @@ public class SystemManager : MonoBehaviour
         }
     }
 
+    public void BeginCombat()
+    {
+        ChangeGameState(1);
+        SetBossHealthBar(interactingNPC);
+        player.transform.Find("WeaponHandler").gameObject.SetActive(true);
+        combatUI.SetActive(true);
+        kbAttack.SetActive(true);
+    }
+
     public void ChangeGameState(int state)
     {
         GameState = state;
     }
 
-    public void SetBossHealthBar(float health)
+    public void SetBossHealthBar(GameObject boss)
     {
-        bossHPBar.maxValue = health;
+        bossHPBar.maxValue = boss.GetComponent<HealthSystem>().getMaxHealth();
+        bossHPBar.value = bossHPBar.maxValue;
+    }
+
+    public void SetInteractingNPC(GameObject npc)
+    {
+        interactingNPC = npc;
     }
 
     public void DamageBossHealthBar(float damage)

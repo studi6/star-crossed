@@ -19,5 +19,6 @@ public class TestNPC : NPC, ITalkable
     {
         //start conversation
         dialogueController.DisplayNextParagraph(dialogueText);
+        SystemManager.instance.SetInteractingNPC(gameObject);
     }
 }

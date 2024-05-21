@@ -95,7 +95,7 @@ public class DialogueController : MonoBehaviour
         if (gameObject.activeSelf)
         {
             if (dialogueText.whenFinishBeginCombat)
-                SystemManager.instance.ChangeGameState(1);
+                SystemManager.instance.BeginCombat();
             else
                 SystemManager.instance.ChangeGameState(0);
             gameObject.SetActive(false);
