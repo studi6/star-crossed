@@ -12,18 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae1943ae5df7a354da70e7c65bad5f5c, type: 3}
   m_Name: Handgun
   m_EditorClassIdentifier: 
-  name: New Weapon
-  icon: {fileID: 0}
-  bullet: {fileID: 0}
-  audioSource: {fileID: 0}
-  gunShootSound: {fileID: 0}
-  gunReloadtSound: {fileID: 0}
-  gunReloadtSoundVolume: 0.15
-  currentClipAmmo: 0
-  maxClipAmmo: 0
-  totalAmmo: 0
-  bulletVelocity: 0
-  reloadTime: 0
+  name: Handgun
+  sprite: {fileID: 21300000, guid: e845695e394b3c04e9c20516376bcefb, type: 3}
+  bulletSprite: {fileID: -688398284, guid: ce4787426093c8b4cb499d322fe273f3, type: 3}
+  gunShootSound: {fileID: 8300000, guid: 6180a24945221834cbbf6c6cc46095f0, type: 3}
+  gunReloadSound: {fileID: 8300000, guid: 5f518cd5b95d8474991150cf612da2ed, type: 3}
+  gunReloadSoundVolume: 0.15
+  maxClipAmmo: 10
+  totalAmmo: 100
+  currentClipAmmo: 10
+  bulletVelocity: 20
+  reloadTime: 1
   fireRate: 0
   recoil: 0
   shotVisibility: 0

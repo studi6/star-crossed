@@ -4,34 +4,41 @@ using UnityEngine;
 
 public class WeaponHandlerScript : MonoBehaviour
 {
-    private Transform m_transform;
+    private Transform transform;
+    private AudioSource audioSource;
     private SpriteRenderer sr;
-    private Sprite sprite;
     [SerializeField] private Weapon gun1;
     [SerializeField] private Weapon gun2;
-    private Weapon melee;
-    private Weapon cur_weapon;
+    public Weapon melee;
+    public Weapon cur_weapon;
+    public int currentClipAmmo;
 
     public GameObject item;
     public GameObject bullet;
-    public AudioSource audioSource;
-    public bool isActive;
-    private bool canFire = true;
+    
+    public bool canFire = true;
 
-    // checks the angle of the mouse, then rotates object
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        transform = GetComponent<Transform>();
+        sr = GetComponent<SpriteRenderer>();
+        setCurWeapon(gun1);
+    }
+
     private void rotateWeapon()
     {
-        Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - m_transform.position;
+        Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        m_transform.rotation = rotation;
+        transform.rotation = rotation;
     }
 
     private void setCurWeapon(Weapon wep)
     {
         cur_weapon = wep;
-        m_transform = cur_weapon.transform;
-        sprite = cur_weapon.sprite;
+        currentClipAmmo = cur_weapon.currentClipAmmo;
+        sr.sprite = cur_weapon.sprite;
     }
 
     private void swapWeapon()
@@ -45,17 +52,53 @@ public class WeaponHandlerScript : MonoBehaviour
             setCurWeapon(gun2);
         }
     }
-  
-    // Start is called before the first frame update
-    void Start()
+
+    protected void Fire()
     {
-        setCurWeapon(gun1);
+        audioSource.PlayOneShot(cur_weapon.gunShootSound);
+        GameObject projectile = Instantiate(bullet, transform.position, transform.rotation);
+        projectile.GetComponent<Rigidbody2D>().AddForce(transform.right * cur_weapon.bulletVelocity, ForceMode2D.Impulse);
+        currentClipAmmo--;
+        StartCoroutine(FireRateCooldown());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator FireRateCooldown()
+    {
+        canFire = false;
+        yield return new WaitForSeconds(cur_weapon.fireRate);
+        canFire = true;
+    }
+
+    private void Reload()
+    {
+        StartCoroutine(ReloadWait());
+        audioSource.PlayOneShot(cur_weapon.gunReloadSound, cur_weapon.gunReloadSoundVolume);
+    }
+
+    IEnumerator ReloadWait()
+    {
+        yield return new WaitForSeconds(cur_weapon.reloadTime);
+        cur_weapon.totalAmmo = cur_weapon.totalAmmo - (cur_weapon.maxClipAmmo - currentClipAmmo);
+        currentClipAmmo = cur_weapon.maxClipAmmo;
+    }
+
+    private void Update()
     {
         rotateWeapon();
         swapWeapon();
+        if (Input.GetMouseButton(0) && canFire && (currentClipAmmo > 0))
+        {
+            audioSource.Stop();
+            Fire();
+        }
+        if (Input.GetKeyDown("r") && (currentClipAmmo < cur_weapon.maxClipAmmo))
+        {
+            Reload();
+        }
+        if (currentClipAmmo == 0)
+        {
+            Reload();
+        }
     }
+    // checks the angle of the mouse, then rotates object
 }
