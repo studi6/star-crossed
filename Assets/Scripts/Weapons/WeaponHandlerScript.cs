@@ -29,6 +29,7 @@ public class WeaponHandlerScript : MonoBehaviour
     private void rotateWeapon()
     {
         Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        sr.flipY = (direction.x < 0); 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = rotation;
