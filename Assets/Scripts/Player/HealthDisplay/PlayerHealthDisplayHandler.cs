@@ -16,7 +16,7 @@ public class PlayerHealthDisplayHandler : MonoBehaviour
     private void Awake()
     {
         // Caching
-        iPlayerHealth = (int)playerHealth.fHealth;
+        iPlayerHealth = (int)playerHealth.m_fHealth;
     }
 
     void OnEnable()

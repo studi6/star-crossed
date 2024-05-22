@@ -3,7 +3,12 @@ guid: 982a00d40bbfc2a49a90d4da16020bd6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - combatUI: {instanceID: 0}
+  - kbAttack: {instanceID: 0}
+  - bossHPBar: {instanceID: 0}
+  - bossHPBarObj: {instanceID: 0}
+  - player: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
