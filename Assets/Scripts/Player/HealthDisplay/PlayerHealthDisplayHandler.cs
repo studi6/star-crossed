@@ -16,7 +16,7 @@ public class PlayerHealthDisplayHandler : MonoBehaviour
     private void Awake()
     {
         // Caching
-        m_iPlayerHealth = (int)playerHealth.m_fHealth;
+        m_iPlayerHealth = playerHealth.m_iHealth;
     }
 
     void OnEnable()
@@ -54,7 +54,7 @@ public class PlayerHealthDisplayHandler : MonoBehaviour
             for (int i = 1; i < hearts.Count; i++)
             {
                 int playerHealthEights = (m_iPlayerHealth / 100) * (numHearts * 2);
-                int heartStatusRemainder = (int)Mathf.Clamp(playerHealthEights - (i * 2), 0, 2);
+                int heartStatusRemainder = Mathf.Clamp(playerHealthEights - (i * 2), 0, 2);
                 hearts[i].setHeartImage((HeartStatus)heartStatusRemainder);
             }
             return;
@@ -64,7 +64,7 @@ public class PlayerHealthDisplayHandler : MonoBehaviour
         for (int i = 0; i < hearts.Count; i++)
         {
             int playerHealthEights = (m_iPlayerHealth / 100) * (numHearts * 2);
-            int heartStatusRemainder = (int)Mathf.Clamp(playerHealthEights - (i * 2), 0, 2);
+            int heartStatusRemainder = Mathf.Clamp(playerHealthEights - (i * 2), 0, 2);
             hearts[i].setHeartImage((HeartStatus)heartStatusRemainder);
         }
     }

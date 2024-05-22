@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : BulletScript
 {
-    public float damage;
+    public int damage;
     public string tag;
     public string enemyTag;
     public Rigidbody2D rb;

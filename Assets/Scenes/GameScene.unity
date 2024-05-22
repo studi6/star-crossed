@@ -10381,7 +10381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1616207154531044527, guid: 32b7d3403ecbd3d49ae086a2ca7b5b44, type: 3}
       propertyPath: m_Name
-      value: Character
+      value: LocalPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 6334635453213612123, guid: 32b7d3403ecbd3d49ae086a2ca7b5b44, type: 3}
       propertyPath: m_Enabled

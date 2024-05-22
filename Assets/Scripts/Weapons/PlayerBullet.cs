@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerBullet : BulletScript
 {
     [SerializeField]
-    private float damage;
+    private int damage;
      void Start()
     {
-        damage = 0.015f; // placeholder value
+        damage = 1; // placeholder value
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

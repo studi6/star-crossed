@@ -5,11 +5,11 @@ using UnityEngine;
 public class HealItem : MonoBehaviour
 {
     [SerializeField]
-    private float heal;
+    private int heal;
     // Start is called before the first frame update
     void Start()
     {
-        heal = 10f; // placeholder amount
+        heal = 10; // placeholder amount
     }
 
     public void OnCollisionEnter2D(Collision2D collision) 
